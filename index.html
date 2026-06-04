@@ -170,38 +170,35 @@
   .subhead p{font-size:13.5px;color:var(--ink-2);font-weight:600;white-space:nowrap}
 
   .railx{position:relative;margin:0 -22px}
-  .rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 22px 18px;
-    -webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab}
-  .rail::-webkit-scrollbar{display:none}
-  .tcard{scroll-snap-align:start;flex:0 0 300px;text-align:left;cursor:pointer;border:1px solid var(--line);
-    background:var(--paper);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;
-    box-shadow:var(--shadow-soft);transition:transform .35s,box-shadow .35s;color:inherit}
+  /* ===== КАТАЛОГ: КРУПНЫЕ ФОТО-КАРТОЧКИ ===== */
+  .tour-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:760px){.tour-grid{grid-template-columns:1fr}}
+  .tcard{position:relative;display:block;width:100%;min-height:clamp(330px,40vw,430px);text-align:left;cursor:pointer;
+    border:1px solid var(--line);border-radius:var(--r);overflow:hidden;color:#fff;background:var(--paper);
+    box-shadow:var(--shadow-soft);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
   .tcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-  .tcard .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
-  .tcard .im{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-  .tcard:hover .im{transform:scale(1.08)}
-  .tcard .tags{position:absolute;left:13px;top:13px;display:flex;gap:7px;flex-wrap:wrap;z-index:2}
-  .tag{background:rgba(8,18,26,.66);backdrop-filter:blur(6px);color:#fff;border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px;font-size:11.5px;font-weight:700}
-  .tag.hit{background:var(--brick);color:#fff}
-  .tag.star{background:var(--gold);color:#3a2a08}
-  .tcard .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
-  .tcard .meta{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
-  .tcard h3{font-size:20px;font-weight:700;margin-bottom:14px;line-height:1.2}
-  .tcard .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
-  .price b{font-family:'Playfair Display',serif;font-size:23px;font-weight:700;white-space:nowrap}
-  .price small{display:block;font-size:11px;color:var(--ink-2);font-weight:600}
-  .more{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--brick)}
-  .more svg{width:15px;height:15px;transition:transform .3s}
-  .tcard:hover .more svg{transform:translateX(3px)}
-  /* карточка-конструктор */
-  .tcard.build{background:linear-gradient(150deg,var(--blue),var(--blue-2));color:#fff;border-color:transparent}
-  .tcard.build .ph{aspect-ratio:4/3;display:grid;place-items:center;background:none}
-  .tcard.build .ph .big-ic{width:64px;height:64px;border-radius:18px;background:rgba(255,255,255,.12);display:grid;place-items:center}
-  .tcard.build .ph .big-ic svg{width:32px;height:32px;color:var(--gold)}
-  .tcard.build .meta{color:#f0cf8d}
-  .tcard.build .foot{border-top-color:rgba(255,255,255,.18)}
-  .tcard.build .price small{color:rgba(255,255,255,.7)}
-  .tcard.build .more{color:#f3d493}
+  .tcard .im{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+  .tcard:hover .im{transform:scale(1.07)}
+  .tcard .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,15,21,.3) 0%,rgba(7,15,21,0) 26%,rgba(7,15,21,.5) 56%,rgba(5,12,18,.94) 100%)}
+  .tcard .tags{position:absolute;left:16px;top:16px;display:flex;gap:7px;flex-wrap:wrap;z-index:3}
+  .tag{background:rgba(8,18,26,.55);backdrop-filter:blur(6px);color:#fff;border:1px solid rgba(255,255,255,.22);padding:6px 12px;border-radius:999px;font-size:11.5px;font-weight:700}
+  .tag.hit{background:var(--brick);color:#fff;border-color:transparent}
+  .tag.star{background:var(--gold);color:#3a2a08;border-color:transparent}
+  .tcard .info{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:24px 22px 20px}
+  .tcard .meta{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#f0cf8d;margin-bottom:9px}
+  .tcard h3{font-size:clamp(20px,2.3vw,25px);font-weight:700;line-height:1.16;color:#fff;margin-bottom:15px;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+  .tcard .foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:15px;border-top:1px solid rgba(255,255,255,.22)}
+  .price b{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;white-space:nowrap}
+  .price small{display:block;font-size:11.5px;color:rgba(255,255,255,.72);font-weight:600}
+  .more{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:#f3d493;white-space:nowrap}
+  .more svg{width:16px;height:16px;transition:transform .3s}
+  .tcard:hover .more svg{transform:translateX(4px)}
+  /* карточка-конструктор (без фото) */
+  .tcard.build{background:linear-gradient(150deg,#16557a,#0c2b3e)}
+  .tcard.build .build-ic{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:20px;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;z-index:2}
+  .tcard.build .build-ic svg{width:34px;height:34px;color:var(--gold)}
+  .tcard.build .grad{background:linear-gradient(180deg,transparent 42%,rgba(5,12,18,.55) 100%)}
 
   .nav-btn{position:absolute;top:42%;width:46px;height:46px;border-radius:50%;background:rgba(17,42,58,.92);border:1px solid rgba(255,255,255,.16);
     box-shadow:var(--shadow-soft);display:grid;place-items:center;cursor:pointer;z-index:6;transition:.25s;color:#fff;backdrop-filter:blur(6px)}
@@ -209,7 +206,6 @@
   .nav-btn svg{width:20px;height:20px}
   .nav-btn.prev{left:6px}.nav-btn.next{right:6px}
   @media(max-width:880px){.nav-btn{display:none}}
-  @media(max-width:560px){.tcard{flex:0 0 82%}}
 
   .tours-note{margin-top:40px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
     padding:24px 26px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow-soft)}
@@ -381,6 +377,11 @@
   .m-price span{font-family:'Manrope';font-size:13px;color:var(--ink-2);font-weight:600}
   .m-desc{color:var(--ink-2);font-size:15px}
   .m-desc p{margin-bottom:12px}
+  .m-desc h4{font-family:'Manrope',sans-serif;color:var(--ink);font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin:6px 0 12px}
+  .m-desc ul{list-style:none;margin:0 0 4px;padding:0}
+  .m-desc li{position:relative;padding-left:22px;margin-bottom:10px;line-height:1.5}
+  .m-desc li::before{content:"";position:absolute;left:5px;top:8px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .m-desc li b{color:var(--ink);font-weight:700}
   .thumbs{display:flex;gap:10px;overflow-x:auto;margin:18px 0 6px;padding-bottom:6px;scrollbar-width:none;cursor:grab}
   .thumbs::-webkit-scrollbar{display:none}
   .grabbing{cursor:grabbing!important;scroll-snap-type:none!important;user-select:none}
@@ -487,23 +488,13 @@
 
     <div class="subhead reveal">
       <h3>Экскурсии на один день</h3>
-      <p>Листайте вбок →</p>
     </div>
-    <div class="railx reveal">
-      <button class="nav-btn prev" data-rail="rail-day" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6"/></svg></button>
-      <div class="rail" id="rail-day"></div>
-      <button class="nav-btn next" data-rail="rail-day" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></button>
-    </div>
+    <div class="tour-grid reveal" id="rail-day"></div>
 
     <div class="subhead reveal">
       <h3>Многодневные туры под ключ</h3>
-      <p>Листайте вбок →</p>
     </div>
-    <div class="railx reveal">
-      <button class="nav-btn prev" data-rail="rail-multi" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6"/></svg></button>
-      <div class="rail" id="rail-multi"></div>
-      <button class="nav-btn next" data-rail="rail-multi" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></button>
-    </div>
+    <div class="tour-grid reveal" id="rail-multi"></div>
 
     <div class="tours-note reveal">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
@@ -651,11 +642,10 @@
       <label>Какая экскурсия интересует?</label>
       <select name="tour" id="formTour">
         <option>Хафткул: семь озёр</option>
-        <option>Самарканд — с душой и огоньком</option>
-        <option>Самарканд → Шахрисабз</option>
-        <option>Чимган и Амирсой (из Ташкента)</option>
-        <option>Трансфер Самарканд — Шахрисабз</option>
-        <option>Экспресс по сердцу страны (2 дня)</option>
+        <option>Из Самарканда в Шахрисабз</option>
+        <option>Из Ташкента — туда, куда вы не ездили</option>
+        <option>Трансфер Самарканд — Шахрисабз — и обратно</option>
+        <option>Экспресс Ташкент → Самарканд → Конигил (2 дня)</option>
         <option>Тур: Ташкент · Бухара · Самарканд</option>
         <option>Тур: Хива · Самарканд · Бухара · Ташкент</option>
         <option>Индивидуальный маршрут</option>
@@ -731,59 +721,53 @@
   const IMG='img/';
   // ===== ДАННЫЕ ТУРОВ =====
   const TOURS=[
-    {id:'haftkul',cat:'day',title:'Хафткул: семь удивительных озёр',meta:'Целый день · из Самарканда · авто',
-     price:'от $277',badge:'★ Хит', unit:'за экскурсию', badgeClass:'hit',img:IMG+'08720ccc-275b-46ee-a93c-3a39278c4365.jpg',
-     long:`<p>Раннее утро, выезд от вашего отеля — и впереди целый день среди Фанских гор. Мы пересекаем границу с Таджикистаном и на полноприводном автомобиле с опытным водителем поднимаемся к каскаду из семи озёр, каждое со своим цветом и формой воды.</p><p>По дороге — рассказы о традициях, быте и истории двух стран, остановки на лучших панорамах и пикник на берегу. Маки вдоль дороги, кристальный горный воздух и тишина, которую невозможно забыть.</p>`,
-     incl:['Трансфер от отеля и обратно','Полноприводный авто с водителем','Сопровождение гида весь день','Пикник на берегу озера','Помощь на границе'],
-     gallery:[IMG+'d5bfb65b-37ce-43f8-8927-984cca16e890.webp',IMG+'70b8d3d7-aecf-441f-baf5-76946eeded5b.webp',IMG+'photo_9_2026-06-04_14-40-04.jpg',IMG+'19aeae09-2658-497f-92e5-444be9e6edde.webp']},
+    {id:'haftkul',cat:'day',title:'Хафткул: семь удивительных озёр',meta:'Целый день · из Самарканда · авто 4×4',
+     price:'от $277',badge:'★ Хит', unit:'за группу', badgeClass:'hit',img:IMG+'7lakes/08720ccc-275b-46ee-a93c-3a39278c4365.jpg',
+     long:`<p>Каждое из семи озёр имеет своё название. Знакомство начнём с озера Нежигон, затем посетим Соя, Гушор, Нофин, Хурдак, крупнейшее из всех — Маргузор, и последнее, названное «тысячей родников», — Хазорчашма. Почти все озёра относятся к завальному типу. Что это такое и какое из семи не является завальным — расскажу в поездке. А ещё покажу древние петроглифы на берегу: они говорят о почтенном возрасте водоёмов.</p><p>Озёра располагаются в Фанских горах, и перепад высот между ними существенный — 760 м: самое нижнее на высоте 1640 м над уровнем моря, последнее — на отметке 2400 м. Все семь посетим на комфортабельном внедорожнике: прокатимся по серпантину, полюбуемся лучшими видами и устроим лёгкий пикник в живописном месте.</p>`,
+     incl:['Полноприводный внедорожник с водителем','Сопровождение гида весь день','Все семь озёр за поездку','Лёгкий пикник на берегу','Помощь на границе'],
+     gallery:[IMG+'7lakes/d5bfb65b-37ce-43f8-8927-984cca16e890.webp',IMG+'7lakes/0ea78151-bbc0-4282-9314-d27faed68328.jpg',IMG+'7lakes/31af5ad2-00d6-4b57-b3dd-a5bf244a5515.webp',IMG+'7lakes/37343933-aa99-489f-8967-ce3b0745a63d.webp',IMG+'7lakes/44f44d04-76b7-4f50-a070-5851c64e2826.webp']},
 
-    {id:'samarkand',cat:'day',title:'Самарканд — с душой и огоньком',meta:'Групповая · Самарканд · ~6 часов',
-     price:'от $35',unit:'с человека',badge:'Группа',badgeClass:'star',img:IMG+'f06fb4e8-3c31-4d86-be99-b6f2454ffd06.jpg',
-     long:`<p>Классический Самарканд за один насыщенный день: площадь Регистан, мавзолей Гур-Эмир, мечеть Биби-Ханым и сияющий некрополь Шахи-Зинда. Живые истории, легенды и детали, которые обычно проходят мимо туристов.</p><p>Небольшая группа, спокойный темп и время на фотографии в самых красивых ракурсах. Подскажем, где вкусно поесть и что привезти с базара.</p>`,
-     incl:['Сопровождение гида','Маршрут по главным памятникам','Помощь с фотографиями','Советы по кухне и базарам'],
-     gallery:[IMG+'photo_3_2026-06-04_14-40-04.jpg',IMG+'812c7a3a-f899-4cd7-a518-c0153e70d5a8.jpg',IMG+'photo_8_2026-06-04_14-40-04.jpg',IMG+'0ea78151-bbc0-4282-9314-d27faed68328.jpg']},
+    {id:'shahrisabz',cat:'day',title:'Из Самарканда в Шахрисабз',meta:'Целый день · из Самарканда · авто',
+     price:'от $186',unit:'за группу',badge:'Индивидуально',badgeClass:'',img:IMG+'shakhrisabz/af9fcf20-83ae-4e34-bf3c-733222e80127.jpg',
+     long:`<p>Поездка в Шахрисабз займёт около 2 часов. По дороге вы понаблюдаете за неторопливым бытом сельских жителей, использующих вместо транспорта осликов. А ещё заедем на горный базар, где продаётся местная продукция — травы, специи, горный чай, мёд и многое другое.</p><h4>Точки маршрута</h4><ul><li>Пещера-грот Тешик-Таш, где снимали фильм «Апачи»</li><li>Кафе «Катта-Таш» на перевале — попробуете исконно горское блюдо тандыр-гушт и познакомитесь с технологией приготовления одного из гастрономических символов Узбекистана (блюдо очень калорийное — возможно, хватит лёгкого завтрака перед экскурсией)</li><li>Исторический центр Шахрисабза с уникальной сохранившейся архитектурой</li><li>Мемориальный комплекс «Дорус Саодат» с мавзолеем Джахонгира и Омар-Шейха (конец XIV в.) и мечетью Хазрати Имам (XIV в.)</li><li>Комплекс «Дорут-Тиловат» (XIV–XV вв.) с усыпальницей Тимуридов и мечетью Кок-Гумбаз</li><li>Дворец Ак-Сарай — руины резиденции Амира Тимура (Тамерлана)</li></ul>`,
+     incl:['Автомобиль с кондиционером и водитель','Сопровождение гида весь день','Остановка на горном базаре','Фотопаузы на перевале и у Ак-Сарая'],
+     gallery:[IMG+'shakhrisabz/0988819c-f29b-4acb-81ce-18f1ad7fe754.webp',IMG+'shakhrisabz/4486f126-c410-447b-9bbb-d67139b7db12.webp',IMG+'shakhrisabz/bdfd8647-942d-4dc7-a102-096779eb7578.jpg',IMG+'shakhrisabz/e58b88ce-2b7c-48d6-abec-deb9ce464a02.webp']},
 
-    {id:'shahrisabz',cat:'day',title:'Из Самарканда в Шахрисабз',meta:'Целый день · авто · индивидуально',
-     price:'от $120',unit:'за экскурсию',badge:'Индивидуально',badgeClass:'',img:IMG+'af9fcf20-83ae-4e34-bf3c-733222e80127.jpg',
-     long:`<p>Поездка на родину Амира Темура через живописный горный перевал. Грандиозный дворец Ак-Сарай, древние мавзолеи и неспешная атмосфера маленького города вдали от туристических потоков.</p><p>Индивидуально, на комфортном автомобиле с кондиционером — выезжаем тогда, когда удобно вам.</p>`,
-     incl:['Автомобиль с кондиционером','Опытный водитель','Сопровождение гида','Остановки на перевале для фото'],
-     gallery:[IMG+'7a0ed618-3f95-47be-b06d-ecb7ebb8d7d6.webp',IMG+'photo_6_2026-06-04_14-40-04.jpg',IMG+'6fd2e413-198f-412c-a155-c7014dc9ab43.webp']},
+    {id:'chimgan',cat:'day',title:'Из Ташкента — туда, куда вы не ездили (а зря!)',meta:'7 часов · из Ташкента · Тянь-Шань',
+     price:'от $150',unit:'за группу',badge:'из Ташкента',badgeClass:'',img:IMG+'tas/04797f43-c677-4cf8-9d0a-17a7f2877c2a.webp',
+     long:`<p>Целый день среди гор западного Тянь-Шаня недалеко от Ташкента — места, мимо которых обычно проезжают. А зря!</p><h4>Точки маршрута</h4><ul><li><b>Амирсой.</b> По канатной дороге поднимемся на высоту 2290 метров — панорамы горных вершин и чистый горный воздух.</li><li><b>Чимган.</b> Погуляем по склонам и полюбуемся величественными пиками западного Тянь-Шаня.</li><li><b>Чарвакское водохранилище.</b> Остановимся на высоком холме и насладимся видами знаменитого бирюзового озера в окружении гор. При желании можно искупаться и отдохнуть на чистом пляже.</li><li><b>Смотровая площадка</b> с видами на живописные посёлки Бричмула и Ходжикент.</li><li><b>Многовековые платаны и древние петроглифы</b> возрастом 40–100 тысяч лет до н. э. — прикоснётесь к истории и узнаете о тайнах древних изображений.</li></ul>`,
+     incl:['Трансфер из Ташкента и обратно','Сопровождение гида весь день','Подъём по канатной дороге Амирсой','Остановки на лучших смотровых'],
+     gallery:[IMG+'tas/4c8eb723-1fd8-4576-b534-5611e522d255.webp',IMG+'tas/826b9d53-188e-43cf-8474-d1386435c655.webp',IMG+'tas/894a2e62-9a3c-42a6-914f-6f7d00d34eb9.jpg',IMG+'tas/fd868b98-7670-418d-8365-4723a48aff2d.webp']},
 
-    {id:'chimgan',cat:'day',title:'Чимган и Амирсой из Ташкента',meta:'Целый день · горы Тянь-Шаня',
-     price:'от $150',unit:'за экскурсию',badge:'из Ташкента',badgeClass:'',img:IMG+'photo_1_2026-06-04_14-40-04.jpg',
-     long:`<p>День в горах Тянь-Шаня недалеко от Ташкента: канатная дорога курорта Амирсой, панорамы Чимгана и бирюзовое Чарвакское водохранилище.</p><p>Глоток свежего воздуха и природы — идеальный контраст шумному городу.</p>`,
-     incl:['Трансфер из Ташкента','Сопровождение гида','Подъём по канатной дороге (по желанию)','Остановки на лучших видах'],
-     gallery:[IMG+'19aeae09-2658-497f-92e5-444be9e6edde.webp',IMG+'64c297b0-bad3-45be-a84b-d2450aaac0e2.webp',IMG+'photo_5_2026-06-04_14-40-04.jpg',IMG+'photo_4_2026-06-04_14-40-04.jpg']},
+    {id:'transfer',cat:'day',title:'Трансфер из Самарканда в Шахрисабз — и обратно',meta:'Туда и обратно · авто · без гида',
+     price:'от $105',unit:'за группу',badge:'Трансфер',badgeClass:'',img:IMG+'transfer/3bf1506f-9d0a-4a8f-84d0-5b83602ef17b.webp',
+     long:`<p><b>Обратите внимание:</b> это не экскурсия, а услуга перевозки — участие гида не предполагается.</p><p>Автомобиль подадим к вашему отелю или другому удобному месту. В Шахрисабзе у вас будет достаточно времени, чтобы самостоятельно погулять по историческому центру: увидеть архитектуру эпохи Темуридов, пройтись по паркам и почувствовать атмосферу древнего города. После прогулки водитель встретит вас в назначенное время и отвезёт обратно в Самарканд.</p><p>Трансфер проходит на комфортабельном автомобиле Chevrolet или Hyundai (детских кресел нет). Дорога в одну сторону занимает около 2 часов; в пути возможны остановки для отдыха, фото и обеда — по вашему желанию.</p>`,
+     incl:['Подача авто к вашему отелю','Дорога туда и обратно','Комфортный автомобиль (Chevrolet/Hyundai)','Свободное время в Шахрисабзе'],
+     gallery:[IMG+'transfer/3bf1506f-9d0a-4a8f-84d0-5b83602ef17b.webp',IMG+'transfer/cf3aa0bb-6fd7-473e-b6a4-0e2b3d74c99e.webp',IMG+'transfer/e0e4294c-d512-4c57-b2a7-952bcd07e653.webp']},
 
-    {id:'transfer',cat:'day',title:'Трансфер Самарканд — Шахрисабз',meta:'Туда и обратно · авто · через перевал',
-     price:'от $80',unit:'за поездку',badge:'Трансфер',badgeClass:'',img:IMG+'7a0ed618-3f95-47be-b06d-ecb7ebb8d7d6.webp',
-     long:`<p>Комфортный трансфер туда-обратно через горный перевал с остановками на самых красивых точках. Отличный вариант, если хотите добраться с комфортом и сделать яркие кадры в пути.</p>`,
-     incl:['Автомобиль с кондиционером','Опытный водитель','Остановки для фото на перевале'],
-     gallery:[IMG+'af9fcf20-83ae-4e34-bf3c-733222e80127.jpg',IMG+'6fd2e413-198f-412c-a155-c7014dc9ab43.webp',IMG+'photo_6_2026-06-04_14-40-04.jpg']},
-
-    {id:'express',cat:'multi',title:'Экспресс по сердцу страны',meta:'2 дня · Ташкент → Самарканд → Конигил',
-     price:'от $450',unit:'за тур',badge:'2 дня',badgeClass:'star',img:IMG+'6c4b31d8-d468-49e6-bc43-e8284992467f.webp',
-     long:`<p>Концентрат Узбекистана за два дня: современный Ташкент, великолепный Самарканд и мастерская самаркандской бумаги в Конигиле. Идеально, когда времени мало, а увидеть хочется главное.</p><p>Трансферы, гид и вся логистика — берём на себя.</p>`,
-     incl:['Трансферы между городами','Сопровождение гида','Программа по Ташкенту и Самарканду','Мастер-классы и дегустации'],
-     gallery:[IMG+'photo_2_2026-06-04_14-40-04.jpg',IMG+'photo_7_2026-06-04_14-40-04.jpg',IMG+'2bbb9b51-5511-4736-a1c1-bad85687e351.webp']},
+    {id:'express',cat:'multi',title:'Экспресс-путешествие из Ташкента в Самарканд с поездкой в Конигил',meta:'2 дня · Ташкент → Самарканд → Конигил',
+     price:'от $450',unit:'за человека',badge:'2 дня',badgeClass:'star',img:IMG+'heart/14cf304d-01ec-4ce6-a0b5-958cf9faae6c.webp',
+     long:`<p>За 2 дня вы посетите легендарную площадь Регистан, некрополь Шахи-Зинда и мавзолей Тамерлана, ощутите дух науки в обсерватории Улугбека и прогуляетесь по шумному Сиабскому базару.</p><p>Узнаете тайны древнего Афросиаба, прикоснётесь к святыне пророка Даниила и увидите, как по старинным технологиям создаётся самаркандская бумага.</p>`,
+     incl:['Трансферы Ташкент — Самарканд','Сопровождение гида','Программа по Самарканду','Поездка в Конигил: самаркандская бумага'],
+     gallery:[IMG+'heart/226cd4b8-1ca0-4459-8340-6881a0879e03.webp',IMG+'heart/26155f52-2bac-4666-ae61-f177985032e0.webp',IMG+'heart/27e5b692-7bcc-4507-be59-1687fc9f26fa.webp',IMG+'heart/50918f28-4142-4e10-bfab-21c17557be19.webp',IMG+'heart/7029f142-c39f-4cf0-9770-e7913269a02a.webp']},
 
     {id:'foryou',cat:'multi',title:'Узбекистан только для вас',meta:'Ташкент · Бухара · Самарканд · индивидуально',
-     price:'от $1400',unit:'за тур под ключ',badge:'★ Под ключ',badgeClass:'hit',img:IMG+'e7e90842-831a-4d3c-9633-3a02296ee7b4.webp',
-     long:`<p>Индивидуальный тур по трём великим городам Шёлкового пути под ваши даты и интересы — без чужих в группе. Внимательные гиды, личные автомобили с кондиционером и проверенные отели.</p><p>Темп и наполнение подстраиваем под вас: история, фото, гастрономия, шопинг.</p>`,
+     price:'от $1704',unit:'за человека',badge:'★ Под ключ',badgeClass:'hit',img:IMG+'solo-uz/07d25247-4e99-4804-a6e1-f0cb4f0ae965.webp',
+     long:`<p>Приглашаем вас в путешествие по восточной сказке! Начнём с Ташкента, где вы оцените сочетание древних построек и атмосферы современного города. Затем маршрут приведёт нас на извилистые улочки древней Бухары, хранящие историю в каждом камне. Завершающим аккордом станет поездка в чарующий Самарканд с его мечетями и медресе.</p><p>Вы насладитесь аутентичной узбекской кухней, выберете самые вкусные лакомства на колоритных базарах и погрузитесь в богатую историю и культуру страны.</p>`,
      incl:['Все трансферы и переезды','Личные гиды в каждом городе','Подобранные отели','Гибкая программа под вас'],
-     gallery:[IMG+'6ca42075-daf9-4d90-a8a1-53303daac723.jpg',IMG+'075c8dcf-decf-413c-92c8-32769df58116.webp',IMG+'af7a8c1c-c9e3-43c4-84f5-d55a41c08d79.webp']},
+     gallery:[IMG+'solo-uz/36de36cb-e4eb-4af7-b965-839a60e9b52b.webp',IMG+'solo-uz/395462ef-d847-44a2-a067-f412bc4bae75.webp',IMG+'solo-uz/4c710a32-e9e1-4838-832f-2cadef897978.webp',IMG+'solo-uz/8f6d5f50-19e4-416f-9876-2d7871a568c7.webp',IMG+'solo-uz/9580f4ac-5286-47dc-b085-ac59caaa7483.webp',IMG+'solo-uz/9674c3fc-e571-4a9c-8680-241ac8f02463.webp']},
 
-    {id:'skazka',cat:'multi',title:'Узбекистан сказочный',meta:'Хива · Самарканд · Бухара · Ташкент',
-     price:'от $1600',unit:'за тур под ключ',badge:'4 города',badgeClass:'',img:IMG+'5ea2d21f-f84b-4b33-99fd-88a006ee7cf9.webp',
-     long:`<p>Большое путешествие по четырём древним городам: загадочная Хива, узорчатая Бухара, величественный Самарканд и столичный Ташкент. Полное погружение в историю, ремёсла и кухню.</p><p>Насыщенно, но без спешки — с заботой о каждой детали, от трансферов до отелей.</p>`,
-     incl:['Маршрут по 4 городам','Все трансферы и сопровождение','Отели и логистика','Личный гид-куратор тура'],
-     gallery:[IMG+'e58b88ce-2b7c-48d6-abec-deb9ce464a02.jpg',IMG+'64c297b0-bad3-45be-a84b-d2450aaac0e2.webp',IMG+'photo_11_2026-06-04_14-40-04.jpg',IMG+'photo_12_2026-06-04_14-40-04.jpg']},
+    {id:'skazka',cat:'multi',title:'Узбекистан сказочный',meta:'Хива · Самарканд · Бухара · Ташкент · индивидуально',
+     price:'от $1949',unit:'за тур под ключ',badge:'★ 4 города',badgeClass:'hit',img:IMG+'skazka/53c3d90f-0501-4bf8-b794-c818b4e2d9e1.webp',
+     long:`<p>Приглашаем увидеть Узбекистан во всей красе: его роскошные дворцы, мечети и минареты. Полюбоваться игрой солнечных лучей на лазурной мозаике, проникнуться восточной атмосферой на шумном базаре и погрузиться в историю. Вы побываете в обсерватории XV века и понаблюдаете, как производят шёлковые ковры по древним технологиям.</p><p>Осмотрите внутренний город Ичан-Кала в Хиве, архитектурные ансамбли Пои-Калян и Ляби-Хауз в Бухаре, мавзолей Гур-Эмир и мечеть Биби-Ханым в Самарканде. А в Ташкенте увидите, как в одном городе сочетаются древность и современность.</p>`,
+     incl:['Маршрут по 4 городам: Хива, Бухара, Самарканд, Ташкент','Все трансферы и сопровождение','Отели и логистика','Личный гид-куратор тура'],
+     gallery:[IMG+'skazka/6bef5931-0c83-4e13-9f56-c9e37fed6f2d.webp',IMG+'skazka/afe2f7eb-8cf1-4410-82e7-184327aa194b.webp',IMG+'skazka/b583e6e1-00a3-4d8c-b837-4cebafa0e369.webp',IMG+'skazka/cd1ca64a-4662-4fed-8669-ba90b1983a94.webp']},
 
-    {id:'custom',cat:'multi',build:true,title:'Свой маршрут под вас',meta:'Любые города · любые даты',
+    {id:'custom',cat:'multi',build:true,title:'Индивидуальный подбор маршрута',meta:'Любые города · любые даты',
      price:'по запросу',unit:'',badge:'Конструктор',badgeClass:'',img:'',
      long:`<p>Расскажите, что вам интересно — история, фотопрогулки, гастрономия, горы или базары — и мы соберём индивидуальный маршрут под ваши даты, темп и бюджет.</p><p>Пеший формат или на автомобиле с кондиционером (все машины в отличном состоянии). Индивидуально или малой группой.</p>`,
      incl:['Маршрут под ваши интересы','Пешком или на авто с кондиционером','Индивидуально или малой группой','Любой город и любые даты'],
-     gallery:[IMG+'photo_10_2026-06-04_14-40-04.jpg',IMG+'6e647161-930d-4471-809b-dab252bc5b6f.webp',IMG+'photo_12_2026-06-04_14-40-04.jpg']}
+     gallery:[IMG+'6e647161-930d-4471-809b-dab252bc5b6f.webp',IMG+'photo_12_2026-06-04_14-40-04.jpg']}
   ];
   const TMAP={}; TOURS.forEach(t=>TMAP[t.id]=t);
 
@@ -821,21 +805,24 @@
 
   // ===== РЕНДЕР КАРТОЧЕК ТУРОВ =====
   const railDay=document.getElementById('rail-day'), railMulti=document.getElementById('rail-multi');
+  const moreSvg=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
   function tourCard(t){
     if(t.build){
       return `<button class="tcard build" data-id="${t.id}">
-        <div class="ph"><span class="big-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
-        <div class="body"><div class="meta">${t.meta}</div><h3>${t.title}</h3>
+        <span class="build-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        <div class="grad"></div>
+        <div class="info"><div class="meta">${t.meta}</div><h3>${t.title}</h3>
           <div class="foot"><div class="price"><b>По запросу</b><small>под ваши даты</small></div>
-            <span class="more">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div>
+            <span class="more">Подробнее ${moreSvg}</span></div></div>
       </button>`;
     }
     const tag=t.badge?`<div class="tags"><span class="tag ${t.badgeClass}">${t.badge}</span></div>`:'';
     return `<button class="tcard" data-id="${t.id}">
-      <div class="ph"><div class="im" style="background-image:url('${t.img}')"></div>${tag}</div>
-      <div class="body"><div class="meta">${t.meta}</div><h3>${t.title}</h3>
+      <div class="im" style="background-image:url('${t.img}')"></div>
+      <div class="grad"></div>${tag}
+      <div class="info"><div class="meta">${t.meta}</div><h3>${t.title}</h3>
         <div class="foot"><div class="price"><b>${t.price}</b><small>${t.unit}</small></div>
-          <span class="more">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div>
+          <span class="more">Подробнее ${moreSvg}</span></div></div>
     </button>`;
   }
   railDay.innerHTML=TOURS.filter(t=>t.cat==='day').map(tourCard).join('');
@@ -886,7 +873,7 @@
   mThumbs.addEventListener('click',e=>{const b=e.target.closest('.t');if(!b)return;
     mImg.style.backgroundImage=`url('${b.dataset.src}')`;
     mThumbs.querySelectorAll('.t').forEach(x=>x.classList.remove('active'));b.classList.add('active');});
-  document.querySelectorAll('.rail').forEach(r=>r.addEventListener('click',e=>{const c=e.target.closest('.tcard');if(c)openTour(c.dataset.id);}));
+  document.querySelectorAll('.tour-grid').forEach(r=>r.addEventListener('click',e=>{const c=e.target.closest('.tcard');if(c)openTour(c.dataset.id);}));
   document.getElementById('mClose').addEventListener('click',()=>closeOverlay(modal));
   modal.addEventListener('click',e=>{if(e.target===modal)closeOverlay(modal);});
   document.getElementById('mBook').addEventListener('click',()=>closeOverlay(modal));
@@ -935,7 +922,7 @@
     el.addEventListener('click',function(e){ if(el.__drag){e.stopPropagation();e.preventDefault();} },true);
     el.addEventListener('dragstart',function(e){e.preventDefault();});
   }
-  ['rail-day','rail-multi','galRail','revRail','mThumbs'].forEach(id=>dragScroll(document.getElementById(id)));
+  ['galRail','revRail','mThumbs'].forEach(id=>dragScroll(document.getElementById(id)));
 
   // ===== СВАЙП В ЛАЙТБОКСЕ (мобильные) =====
   let lbTouchX=0;
