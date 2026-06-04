@@ -488,7 +488,7 @@
     <div class="head center reveal">
       <span class="kicker">Маршруты</span>
       <h2>Экскурсии и авторские туры</h2>
-      <p class="lead" style="margin:14px auto 0">От бирюзовых куполов до тишины горных озёр и восточных базаров. Нажмите на карточку для открытия подробной информации.</p>
+      <p class="lead" style="margin:14px auto 0">От бирюзовых куполов до тишины горных озёр и шума восточных базаров. Нажмите на карточку для открытия подробной информации.</p>
     </div>
 
     <div class="subhead reveal">
@@ -748,7 +748,7 @@
      price:'от $105',unit:'за группу',badge:'Трансфер',badgeClass:'',img:IMG+'transfer/3bf1506f-9d0a-4a8f-84d0-5b83602ef17b.webp',
      long:`<p><b>Обратите внимание:</b> это не экскурсия, а услуга перевозки — участие гида не предполагается.</p><p>Автомобиль подадим к вашему отелю или другому удобному месту. В Шахрисабзе у вас будет достаточно времени, чтобы самостоятельно погулять по историческому центру: увидеть архитектуру эпохи Темуридов, пройтись по паркам и почувствовать атмосферу древнего города. После прогулки водитель встретит вас в назначенное время и отвезёт обратно в Самарканд.</p><p>Трансфер проходит на комфортабельном автомобиле Chevrolet или Hyundai (детских кресел нет). Дорога в одну сторону занимает около 2 часов; в пути возможны остановки для отдыха, фото и обеда — по вашему желанию.</p>`,
      incl:['Подача авто к вашему отелю','Дорога туда и обратно','Комфортный автомобиль (Chevrolet/Hyundai)','Свободное время в Шахрисабзе'],
-     gallery:[IMG+'transfer/3bf1506f-9d0a-4a8f-84d0-5b83602ef17b.webp',IMG+'transfer/cf3aa0bb-6fd7-473e-b6a4-0e2b3d74c99e.webp',IMG+'transfer/e0e4294c-d512-4c57-b2a7-952bcd07e653.webp']},
+     gallery:[IMG+'transfer/17de90cf-b4d5-476a-bfd2-be7b3f39fa2e.webp',IMG+'transfer/cf3aa0bb-6fd7-473e-b6a4-0e2b3d74c99e.webp',IMG+'transfer/e0e4294c-d512-4c57-b2a7-952bcd07e653.webp']},
 
     {id:'express',cat:'multi',title:'Экспресс-путешествие из Ташкента в Самарканд с поездкой в Конигил',meta:'2 дня · Ташкент → Самарканд → Конигил',
      price:'от $450',unit:'за человека',badge:'2 дня',badgeClass:'star',img:IMG+'heart/14cf304d-01ec-4ce6-a0b5-958cf9faae6c.webp',
@@ -870,7 +870,7 @@
     mPrice.innerHTML=t.unit?`${t.price} <span>· ${t.unit}</span>`:t.price;
     mDesc.innerHTML=t.long;
     mIncl.innerHTML=t.incl.map(x=>`<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 6"/></svg>${x}</li>`).join('');
-    const imgs=[cover,...t.gallery];
+    const imgs=[cover,...t.gallery].filter((s,i,a)=>a.indexOf(s)===i);
     mThumbs.innerHTML=imgs.map((s,i)=>`<button class="t ${i===0?'active':''}" data-src="${s}" style="background-image:url('${s}')"></button>`).join('');
     const fs=document.getElementById('formTour'); if(fs){[...fs.options].forEach(o=>{if(o.text.includes(t.title.split(':')[0].split(' —')[0]))fs.value=o.value;});}
     openOverlay(modal);
