@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Экскурсии и туры по Узбекистану с Аврамом · Самарканд, Бухара, Хива</title>
-<meta name="description" content="Авторские экскурсии и туры по Узбекистану с местными гидами. Самарканд, Бухара, Хива, горные озёра. Наш рейтинг 4,99 — более 3000 довольных гостей.">
+<title>Экскурсии и туры по Узбекистану · Самарканд, Бухара, Хива</title>
+<meta name="description" content="Авторские экскурсии и туры по Узбекистану с местными гидами. Самарканд, Бухара, Хива, горные озёра. Рейтинг 4,99 — более 3000 довольных гостей.">
 <meta property="og:title" content="Узбекистан с местными гидами · авторские экскурсии и туры">
 <meta property="og:description" content="Самарканд, Бухара, Хива и горные озёра без толпы и спешки. Индивидуально или малой группой.">
 <meta property="og:type" content="website">
@@ -245,8 +245,8 @@
   /* ===== ОБО МНЕ ===== */
   .about{display:grid;grid-template-columns:.85fr 1fr;gap:60px;align-items:center}
   .about .pic{position:relative}
-  .about .pic .im{aspect-ratio:4/5;background:url('guide.jpg') center/cover;border-radius:var(--arch);box-shadow:var(--shadow)}
-  .about .pic .badge{position:absolute;right:-12px;bottom:24px;background:var(--paper);border-radius:18px;padding:15px 19px;box-shadow:var(--shadow);text-align:center;border:1px solid var(--line)}
+  .about .pic .im{width:100%;aspect-ratio:4/5;background:var(--paper) url('guide.jpg') center/cover;border-radius:var(--arch);box-shadow:var(--shadow)}
+  .about .pic .badge{position:absolute;right:14px;bottom:16px;background:var(--paper);border-radius:18px;padding:15px 19px;box-shadow:var(--shadow);text-align:center;border:1px solid var(--line)}
   .about .pic .badge b{font-family:'Playfair Display',serif;font-size:28px;color:var(--brick);display:block;line-height:1}
   .about .pic .badge small{font-size:11px;color:var(--ink-2);font-weight:600}
   .about .pic::before{content:"";position:absolute;inset:-16px -16px 40px 30px;z-index:-1;border:1.5px solid var(--gold);border-radius:var(--arch);opacity:.5}
@@ -255,7 +255,7 @@
   .chips{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0 24px}
   .chip{display:inline-flex;align-items:center;gap:7px;background:var(--paper);border:1px solid var(--line);padding:9px 15px;border-radius:999px;font-weight:700;font-size:13.5px}
   .chip .s{color:var(--gold)}
-  @media(max-width:840px){.about{grid-template-columns:1fr;gap:42px}.about .pic{max-width:360px;margin:0 auto}}
+  @media(max-width:840px){.about{grid-template-columns:1fr;gap:42px}.about .pic{width:100%;max-width:360px;margin:0 auto}}
 
   /* ===== ГАЛЕРЕЯ — ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ + ЛАЙТБОКС ===== */
   .gal-rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0;padding:14px 22px 16px;
@@ -414,11 +414,11 @@
   <div class="wrap nav">
     <a href="#top" class="brand">
       <span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="1.4"/><rect x="5" y="5" width="14" height="14" rx="1.4" transform="rotate(45 12 12)"/></g><circle cx="12" cy="12" r="2.4" fill="#0f3a52"/></svg></span>
-      <span><b>Аврам</b><span class="sub">Travel · Узбекистан</span></span>
+      <span><b>Аврам</b><span class="sub">Ваш гид по Узбекистану</span></span>
     </a>
     <nav class="menu">
       <a href="#tours" class="lnk">Экскурсии</a>
-      <a href="#about" class="lnk">О нас</a>
+      <a href="#about" class="lnk">Обо мне</a>
       <a href="#reviews" class="lnk">Отзывы</a>
       <a href="#faq" class="lnk">Вопросы</a>
       <a href="#booking" class="btn btn-brick">Забронировать</a>
@@ -427,7 +427,7 @@
   </div>
   <div class="mobile" id="mobile">
     <a href="#tours">Экскурсии</a>
-    <a href="#about">О нас</a>
+    <a href="#about">Обо мне</a>
     <a href="#reviews">Отзывы</a>
     <a href="#faq">Вопросы</a>
     <a href="#booking" class="btn btn-brick">Забронировать экскурсию</a>
@@ -447,12 +447,12 @@
       </div>
       <div class="msg-row">
         <span class="lbl">Написать:</span>
-        <a href="https://wa.me/998900000000" class="msg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>WhatsApp</a>
-        <a href="https://t.me/your_username" class="msg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 2.9 11.6c-1 .4-1 1.7 0 2l4.8 1.5L9.4 21c.3.8 1.3.9 1.9.3l2.6-2.6 4.7 3.5c.7.5 1.6.1 1.8-.7L23 5.7c.2-1-.4-1.8-1.1-1.4Zm-3.6 4-7.4 6.6c-.3.2-.4.6-.4.9l-.3 2.6-1.3-4.4 8.7-5.6c.4-.3.8.2.7.3Z"/></svg>Telegram</a>
-        <a href="https://max.ru/" class="msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 4V6a1 1 0 011-1z"/><path d="M8.5 13l1.6-3.5 1.9 3 1.9-3L16.5 13" stroke-linecap="round" stroke-linejoin="round"/></svg>Max</a>
+        <a href="https://wa.me/998997709949" class="msg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>WhatsApp</a>
+        <a href="https://t.me/Guide_Avram" class="msg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 2.9 11.6c-1 .4-1 1.7 0 2l4.8 1.5L9.4 21c.3.8 1.3.9 1.9.3l2.6-2.6 4.7 3.5c.7.5 1.6.1 1.8-.7L23 5.7c.2-1-.4-1.8-1.1-1.4Zm-3.6 4-7.4 6.6c-.3.2-.4.6-.4.9l-.3 2.6-1.3-4.4 8.7-5.6c.4-.3.8.2.7.3Z"/></svg>Telegram</a>
+        <a href="https://max.ru/u/f9LHodD0cOKYzItFXIRZHttKHog5OPjb_rv0S7G9jQo2Fz8ujN3aN3vTKDo" class="msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 4V6a1 1 0 011-1z"/><path d="M8.5 13l1.6-3.5 1.9 3 1.9-3L16.5 13" stroke-linecap="round" stroke-linejoin="round"/></svg>Max</a>
       </div>
       <div class="hero-stats">
-        <div><b class="count" data-to="4.99" data-dec="2">4,99</b><small>★ наш рейтинг</small></div>
+        <div><b class="count" data-to="4.99" data-dec="2">4,99</b><small>★ рейтинг</small></div>
         <div><b class="count" data-to="3000" data-suf="+">3000+</b><small>довольных гостей</small></div>
         <div><b class="count" data-to="8" data-suf="">8</b><small>авторских маршрутов</small></div>
       </div>
@@ -465,10 +465,10 @@
 <!-- ЛЕНТА ДОВЕРИЯ -->
 <section class="strip">
   <div class="wrap">
-    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6L2.8 9.3l6.8-.5z"/></svg></span><span><b>4,99</b> из 5 — наш рейтинг</span></div>
+    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6L2.8 9.3l6.8-.5z"/></svg></span><span><b>4,99</b>  из 5 — наш рейтинг</span></div>
     <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M21 7v6M3 11v4c0 2 4 4 9 4s9-2 9-4v-4"/></svg></span><span>Все гиды родом из Узбекистана</span></div>
-    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-9 8.4L3 21l1.1-3a8.5 8.5 0 1116.9-6.5z"/></svg></span><span><b>3000+</b> гостей · многие возвращаются</span></div>
-    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Индивидуально и малыми группами</span></div>
+    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-9 8.4L3 21l1.1-3a8.5 8.5 0 1116.9-6.5z"/></svg></span><span><b>3000+</b>  гостей </span></div>
+    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Индивидуально и группами</span></div>
   </div>
 </section>
 
@@ -478,7 +478,7 @@
     <div class="head center reveal">
       <span class="kicker">Маршруты</span>
       <h2>Экскурсии и авторские туры</h2>
-      <p class="lead" style="margin:14px auto 0">От бирюзовых куполов до тишины горных озёр и восточных базаров. Нажмите на карточку — расскажу о маршруте подробно и покажу фото.</p>
+      <p class="lead" style="margin:14px auto 0">От бирюзовых куполов до тишины горных озёр и восточных базаров. Нажмите на карточку для открытия подробной информации.</p>
     </div>
 
     <div class="subhead reveal">
@@ -532,7 +532,7 @@
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0113 0M16 5.5a3 3 0 010 5.5M21.5 20a6 6 0 00-5-5.9"/></svg></div>
-        <h3>Индивидуально и малыми группами</h3><p>Формат на ваш выбор — личная экскурсия или небольшая компания. Темп подстраиваем под каждого, без спешки и толпы.</p>
+        <h3>Индивидуально и малыми группами</h3><p>Формат на ваш выбор — личная экскурсия или небольшая группа. Темп подстраиваем под вас, без спешки и толпы.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11l1-5h12l1 5M3 11h18v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3z"/><circle cx="7.5" cy="18.5" r="1.6"/><circle cx="16.5" cy="18.5" r="1.6"/></svg></div>
@@ -562,14 +562,14 @@
       <div class="badge"><b>4,99</b><small>3000+ гостей</small></div>
     </div>
     <div class="reveal">
-      <span class="kicker">О нас</span>
+      <span class="kicker">Обо мне</span>
       <h2>Привет! Я — Аврам,<br>ваш гид по Узбекистану</h2>
       <div class="chips">
         <span class="chip"><span class="s">★</span> 4,99 рейтинг</span>
         <span class="chip">3000+ гостей</span>
         <span class="chip">гиды из Узбекистана</span>
       </div>
-      <p class="first">Я родился и вырос в древнем Самарканде — городе, где каждая улица хранит историю Великого шёлкового пути. Со мной команда гидов, искренне влюблённых в Узбекистан: все мы родом из этой страны и в совершенстве знаем её историю.</p>
+      <p class="first">Я родился и вырос в Самарканде — городе, где каждая улица хранит историю Великого шёлкового пути. Со мной команда гидов, искренне влюблённых в Узбекистан: все мы родом из этой страны и в совершенстве знаем её историю.</p>
       <p>Мы показываем гостям настоящий Узбекистан: величественные древние города, шумные восточные базары, уникальную кухню, тёплое гостеприимство и места, о которых знают только местные.</p>
       <p>Экскурсии проводим индивидуально или малыми группами — в темпе, удобном каждому. Многие гости возвращаются к нам снова. Добро пожаловать в Узбекистан!</p>
       <a href="#booking" class="btn btn-brick" style="margin-top:22px">Забронировать экскурсию <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -613,8 +613,8 @@
       <details open><summary>Как забронировать экскурсию?</summary><p>Напишите нам в WhatsApp, Telegram или Max — либо оставьте заявку через форму ниже. Согласуем дату, маршрут и все детали.</p></details>
       <details><summary>Можно ли собрать индивидуальный маршрут?</summary><p>Да, это наша любимая часть работы. Помимо готовых программ соберём маршрут под ваши интересы, даты и бюджет — пеший или на автомобиле.</p></details>
       <details><summary>В каком формате проходят экскурсии?</summary><p>Индивидуально или малыми группами — на ваш выбор. Темп и подачу подстраиваем под каждого, включая семьи с детьми и пожилых гостей.</p></details>
-      <details><summary>На чём передвигаемся?</summary><p>Пешком по историческим центрам или на автомобиле между объектами и городами. Все машины в отличном состоянии и с кондиционером.</p></details>
-      <details><summary>На каком языке проходят экскурсии?</summary><p>Проводим экскурсии на русском, английском и узбекском языках.</p></details>
+      <details><summary>На чём передвигаемся?</summary><p>Пешком по историческому центру или на автомобиле между объектами и городами. Все машины в отличном состоянии и с кондиционером.</p></details>
+      <details><summary>На каком языке проходят экскурсии?</summary><p>Проводим экскурсии на русском, английском и узбекском языках. Гиды прекрасно владеют языками, на которых проводят экскурсии.</p></details>
       <details><summary>Что входит в стоимость?</summary><p>Услуги гида и сопровождение по маршруту. Транспорт, входные билеты и питание уточняются по каждому туру — точную смету пришлём заранее. Цены указаны в долларах, «от».</p></details>
     </div>
   </div>
@@ -629,9 +629,9 @@
       <h2>Готовы увидеть<br>настоящий Узбекистан?</h2>
       <p>Напишите прямо сейчас — ответим в течение нескольких часов и поможем спланировать идеальное путешествие.</p>
       <div class="hero-cta">
-        <a href="https://wa.me/998900000000" class="btn btn-light-ghost"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>WhatsApp</a>
-        <a href="https://t.me/your_username" class="btn btn-light-ghost">Telegram</a>
-        <a href="https://max.ru/" class="btn btn-light-ghost">Max</a>
+        <a href="https://wa.me/998997709949" class="btn btn-light-ghost"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>WhatsApp</a>
+        <a href="https://t.me/Guide_Avram" class="btn btn-light-ghost">Telegram</a>
+        <a href="https://max.ru/u/f9LHodD0cOKYzItFXIRZHttKHog5OPjb_rv0S7G9jQo2Fz8ujN3aN3vTKDo" class="btn btn-light-ghost">Max</a>
       </div>
     </div>
 
@@ -641,7 +641,7 @@
       <h3>Оставить заявку</h3>
       <label>Ваше имя</label>
       <input type="text" name="name" placeholder="Как к вам обращаться?" required>
-      <label>Телефон / WhatsApp</label>
+      <label>Телефон</label>
       <input type="text" name="phone" placeholder="+998 ..." required>
       <label>Какая экскурсия интересует?</label>
       <select name="tour" id="formTour">
@@ -670,21 +670,21 @@
         <a href="#top" class="brand" style="margin-bottom:12px">
           <span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="1.4"/><rect x="5" y="5" width="14" height="14" rx="1.4" transform="rotate(45 12 12)"/></g><circle cx="12" cy="12" r="2.4" fill="#0f3a52"/></svg></span><span><b>Аврам</b><span class="sub">Travel · Узбекистан</span></span>
         </a>
-        <div style="max-width:360px;color:#7d93a1">Авторские экскурсии и туры по Самарканду, Бухаре, Хиве и горам. Наш рейтинг 4,99 · более 3000 довольных гостей.</div>
+        <div style="max-width:360px;color:#7d93a1">Авторские экскурсии и туры по Самарканду, Бухаре, Хиве и горам. Рейтинг 4,99 · более 3000 довольных гостей.</div>
       </div>
       <div class="soc">
-        <a href="https://wa.me/998900000000">WhatsApp</a>
-        <a href="https://t.me/your_username">Telegram</a>
-        <a href="https://max.ru/">Max</a>
-        <a href="https://instagram.com/your_username">Instagram</a>
-        <a href="tel:+998900000000">+998 90 000 00 00</a>
+        <a href="wa.me/998997709949">WhatsApp</a>
+        <a href="https://t.me/Guide_Avram">Telegram</a>
+        <a href="https://max.ru/u/f9LHodD0cOKYzItFXIRZHttKHog5OPjb_rv0S7G9jQo2Fz8ujN3aN3vTKDo">Max</a>
+        <a href="https://instagram.com/guide_avram">Instagram</a>
+        <a href="tel:+998997709949">+998 99 770 99 49</a>
       </div>
     </div>
-    <div class="copy">© 2026 Аврам · гид по Узбекистану. Все права защищены.</div>
+    <div class="copy">© 2026 Аврам · Ваш гид по Узбекистану. Все права защищены.</div>
   </div>
 </footer>
 
-<a href="https://wa.me/998900000000" class="fab" title="Написать в WhatsApp" aria-label="WhatsApp">
+<a href="wa.me/998997709949" class="fab" title="Написать в WhatsApp" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
 </a>
 
@@ -703,7 +703,12 @@
       <ul class="incl" id="mIncl"></ul>
       <div class="m-cta">
         <a href="#booking" class="btn btn-brick" id="mBook">Забронировать <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="https://wa.me/998900000000" class="btn btn-ghost-d">Спросить в WhatsApp</a>
+      </div>
+      <div class="msg-row m-msg">
+        <span class="lbl">Для уточнения деталей:</span>
+        <a href="https://wa.me/998997709949" class="msg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>WhatsApp</a>
+        <a href="https://t.me/Guide_Avram" class="msg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 2.9 11.6c-1 .4-1 1.7 0 2l4.8 1.5L9.4 21c.3.8 1.3.9 1.9.3l2.6-2.6 4.7 3.5c.7.5 1.6.1 1.8-.7L23 5.7c.2-1-.4-1.8-1.1-1.4Zm-3.6 4-7.4 6.6c-.3.2-.4.6-.4.9l-.3 2.6-1.3-4.4 8.7-5.6c.4-.3.8.2.7.3Z"/></svg>Telegram</a>
+        <a href="https://max.ru/u/f9LHodD0cOKYzItFXIRZHttKHog5OPjb_rv0S7G9jQo2Fz8ujN3aN3vTKDo" class="msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 4V6a1 1 0 011-1z"/><path d="M8.5 13l1.6-3.5 1.9 3 1.9-3L16.5 13" stroke-linecap="round" stroke-linejoin="round"/></svg>Max</a>
       </div>
     </div>
   </div>
@@ -721,8 +726,8 @@
   const IMG='img/';
   // ===== ДАННЫЕ ТУРОВ =====
   const TOURS=[
-    {id:'haftkul',cat:'day',title:'Хафткул: семь удивительных озёр',meta:'Целый день · из Самарканда · авто 4×4',
-     price:'от $90',unit:'с человека',badge:'★ Хит',badgeClass:'hit',img:IMG+'08720ccc-275b-46ee-a93c-3a39278c4365.jpg',
+    {id:'haftkul',cat:'day',title:'Хафткул: семь удивительных озёр',meta:'Целый день · из Самарканда · авто',
+     price:'от $277',badge:'★ Хит', unit:'за экскурсию', badgeClass:'hit',img:IMG+'08720ccc-275b-46ee-a93c-3a39278c4365.jpg',
      long:`<p>Раннее утро, выезд от вашего отеля — и впереди целый день среди Фанских гор. Мы пересекаем границу с Таджикистаном и на полноприводном автомобиле с опытным водителем поднимаемся к каскаду из семи озёр, каждое со своим цветом и формой воды.</p><p>По дороге — рассказы о традициях, быте и истории двух стран, остановки на лучших панорамах и пикник на берегу. Маки вдоль дороги, кристальный горный воздух и тишина, которую невозможно забыть.</p>`,
      incl:['Трансфер от отеля и обратно','Полноприводный авто с водителем','Сопровождение гида весь день','Пикник на берегу озера','Помощь на границе'],
      gallery:[IMG+'d5bfb65b-37ce-43f8-8927-984cca16e890.webp',IMG+'70b8d3d7-aecf-441f-baf5-76946eeded5b.webp',IMG+'photo_9_2026-06-04_14-40-04.jpg',IMG+'19aeae09-2658-497f-92e5-444be9e6edde.webp']},
