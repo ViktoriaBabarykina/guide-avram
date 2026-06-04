@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Экскурсии и туры по Узбекистану с Аврамом · Самарканд, Бухара, Хива</title>
+<meta name="description" content="Авторские экскурсии и туры по Узбекистану с местными гидами. Самарканд, Бухара, Хива, горные озёра. Наш рейтинг 4,99 — более 3000 довольных гостей.">
+<meta property="og:title" content="Узбекистан с местными гидами · авторские экскурсии и туры">
+<meta property="og:description" content="Самарканд, Бухара, Хива и горные озёра без толпы и спешки. Индивидуально или малой группой.">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230f3a52'/%3E%3Cg fill='%23c0913c'%3E%3Crect x='5' y='5' width='14' height='14' rx='1.4'/%3E%3Crect x='5' y='5' width='14' height='14' rx='1.4' transform='rotate(45 12 12)'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='2.4' fill='%230f3a52'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --sand:#0a1a24;
+    --sand-2:#0e2433;
+    --paper:#112a3a;
+    --paper-2:#173b4f;
+    --ink:#e9f1f6;
+    --ink-2:#9fb4c2;
+    --blue:#0f3a52;
+    --blue-2:#15506e;
+    --blue-d:#081722;
+    --teal:#36b6a6;
+    --brick:#d4663c;
+    --brick-d:#bb5530;
+    --gold:#d9a743;
+    --line:rgba(255,255,255,.10);
+    --r:22px;
+    --shadow:0 30px 60px -28px rgba(0,0,0,.6);
+    --shadow-soft:0 18px 40px -24px rgba(0,0,0,.5);
+    --arch:46% 46% 16px 16px / 30% 30% 4% 4%;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);
+    background:linear-gradient(180deg,#0b1f2c 0%,#0a1a24 36%,#0a1a24 100%);line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  body.lock{overflow:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  section{padding:clamp(64px,9vw,104px) 0}
+  .serif{font-family:'Playfair Display',Georgia,serif}
+
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-height:1.06;letter-spacing:-.01em}
+  h2{font-size:clamp(30px,5.4vw,54px)}
+  .lead{color:var(--ink-2);font-size:clamp(15.5px,1.4vw,18px);max-width:600px}
+
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--brick);margin-bottom:16px}
+  .kicker::before{content:"✦";color:var(--gold);font-size:13px;letter-spacing:0}
+  .kicker.light{color:var(--gold)}
+  .center{text-align:center}
+  .center .kicker{justify-content:center}
+  .head{max-width:640px;margin:0 auto 48px}
+
+  /* ===== КНОПКИ ===== */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:15px 26px;border-radius:999px;font-weight:700;
+    font-size:15.5px;cursor:pointer;border:1.5px solid transparent;transition:.3s;line-height:1;white-space:nowrap}
+  .btn svg{width:17px;height:17px;transition:transform .3s}
+  .btn:hover svg{transform:translateX(4px)}
+  .btn-brick{background:var(--brick);color:#fff;box-shadow:0 14px 26px -12px rgba(177,78,46,.7)}
+  .btn-brick:hover{background:var(--brick-d)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--ink-2);background:rgba(255,255,255,.05)}
+  .btn-cream{background:var(--paper);color:var(--ink)}
+  .btn-cream:hover{background:var(--paper-2)}
+  .btn-ghost-d{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost-d:hover{border-color:var(--ink-2);background:rgba(255,255,255,.05)}
+  .btn-light-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+  .btn-light-ghost:hover{background:rgba(255,255,255,.16);border-color:#fff}
+  .btn-wa{background:#1f8a4c;color:#fff}
+  .btn-wa:hover{background:#176e3c}
+
+  /* ===== ШАПКА ===== */
+  header{position:fixed;top:0;left:0;right:0;z-index:90;transition:.35s}
+  header.scrolled{background:rgba(8,20,28,.82);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+  .brand .mk{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none;
+    background:linear-gradient(140deg,#16557a,#0f3a52);box-shadow:inset 0 0 0 1px rgba(192,145,60,.45),0 8px 18px -10px rgba(15,58,82,.9)}
+  .brand .mk svg{width:23px;height:23px;color:var(--gold);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+  .brand:hover .mk svg{transform:rotate(90deg)}
+  .brand b{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;display:block;line-height:1.05}
+  .brand .sub{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brick);font-weight:700}
+  header:not(.scrolled) .brand b{color:#fff}
+  header:not(.scrolled) .brand .sub{color:#f0d9a8}
+  .menu{display:flex;align-items:center;gap:28px}
+  .menu a:not(.btn){font-weight:600;font-size:15px;color:var(--ink);opacity:.82;transition:opacity .2s}
+  header:not(.scrolled) .menu a:not(.btn){color:#fff;opacity:.92}
+  .menu a:not(.btn):hover{opacity:1}
+  .burger{display:none;width:46px;height:46px;border-radius:12px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);
+    color:#fff;align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:4px}
+  header.scrolled .burger{border-color:var(--line);background:var(--paper);color:var(--ink)}
+  .burger i{width:18px;height:2px;background:currentColor;display:block;border-radius:2px}
+  @media(max-width:880px){
+    .menu .lnk{display:none}
+    .menu .btn-brick{display:none}
+    .burger{display:flex}
+    .mobile{position:fixed;inset:72px 0 auto 0;z-index:85;background:var(--paper);padding:16px 22px 24px;box-shadow:var(--shadow);
+      transform:translateY(-135%);transition:transform .35s;display:flex;flex-direction:column;gap:4px;border-bottom:1px solid var(--line)}
+    .mobile.open{transform:none}
+    .mobile a{padding:13px 6px;font-weight:600;border-bottom:1px solid var(--line)}
+    .mobile a:last-child{border:0;margin-top:10px}
+  }
+  @media(min-width:881px){.mobile{display:none}}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:120px 0 70px}
+  .hero .bg{position:absolute;inset:0;z-index:-2;background:url('img/hero-tile.jpg') center/cover;
+    transform-origin:60% 40%;animation:kenburns 26s ease-in-out infinite alternate;will-change:transform}
+  @keyframes kenburns{0%{transform:scale(1.05) translate(0,0)}100%{transform:scale(1.16) translate(-2.5%,-1.5%)}}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(105deg,rgba(10,22,32,.94) 0%,rgba(10,22,32,.66) 42%,rgba(10,22,32,.2) 72%,transparent 100%),
+               linear-gradient(0deg,#0a1b27 0px,#0a1b27 78px,rgba(10,27,39,.5) 180px,transparent 340px)}
+  .hero-in{max-width:700px;position:relative}
+  .hero-in>*{animation:heroUp .85s both cubic-bezier(.2,.7,.2,1)}
+  .hero-in>*:nth-child(1){animation-delay:.12s}
+  .hero-in>*:nth-child(2){animation-delay:.24s}
+  .hero-in>*:nth-child(3){animation-delay:.36s}
+  .hero-in>*:nth-child(4){animation-delay:.48s}
+  .hero-in>*:nth-child(5){animation-delay:.6s}
+  .hero-in>*:nth-child(6){animation-delay:.72s}
+  @keyframes heroUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  .hero-loc{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:12px;letter-spacing:.2em;
+    text-transform:uppercase;color:#f0cf8d;margin-bottom:16px}
+  .hero-loc::before{content:"✦";letter-spacing:0}
+  .hero h1{font-size:clamp(38px,7vw,82px);font-weight:800;letter-spacing:-.02em;margin-bottom:20px}
+  .hero h1 em{font-style:italic;font-weight:600;color:#f3d493}
+  .hero p{font-size:clamp(15.5px,1.5vw,19px);color:rgba(255,255,255,.88);max-width:560px;margin-bottom:26px}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .msg-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}
+  .msg-row .lbl{font-size:13px;color:rgba(255,255,255,.7);font-weight:600;margin-right:2px}
+  .msg{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:999px;font-weight:700;font-size:13.5px;
+    border:1.5px solid rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.08);backdrop-filter:blur(6px);transition:.25s}
+  .msg:hover{background:rgba(255,255,255,.2);border-color:#fff;transform:translateY(-2px)}
+  .msg svg{width:16px;height:16px}
+  .hero-stats{display:flex;gap:26px 34px;flex-wrap:wrap;margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,.2)}
+  .hero-stats b{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,34px);font-weight:700;display:block;line-height:1;color:#fff}
+  .hero-stats small{font-size:12.5px;color:rgba(255,255,255,.74);letter-spacing:.02em}
+  .hero-note{margin-top:18px;font-size:13.5px;color:#f0cf8d;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+  .hero-note svg{width:16px;height:16px;flex:none}
+  .scrollcue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:1;color:rgba(255,255,255,.7);font-size:11px;
+    letter-spacing:.2em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scrollcue span{width:1px;height:40px;background:linear-gradient(rgba(255,255,255,.7),transparent);animation:drop 1.8s infinite}
+  @keyframes drop{0%{opacity:0;transform:scaleY(.3);transform-origin:top}50%{opacity:1}100%{opacity:0;transform-origin:bottom}}
+  @media(max-width:600px){.scrollcue{display:none}.hero{padding-top:104px}}
+  @media(prefers-reduced-motion:reduce){.hero .bg{animation:none}.hero-in>*{animation:none}.scrollcue span{animation:none}}
+
+  /* ===== ЛЕНТА ДОВЕРИЯ (плавный переход в песочный) ===== */
+  .strip{background:transparent;color:#fff;padding:30px 0 10px}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px 28px}
+  .strip .it{display:flex;align-items:center;gap:13px;font-weight:600;font-size:14.5px;line-height:1.35}
+  .strip .it b{font-family:'Playfair Display',serif;font-size:24px;color:#f3d493}
+  .strip .it .ic{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.1);display:grid;place-items:center;flex:none}
+  .strip .it svg{width:21px;height:21px;color:var(--gold)}
+  @media(max-width:760px){.strip .wrap{grid-template-columns:1fr 1fr;gap:16px}}
+  @media(max-width:420px){.strip .wrap{grid-template-columns:1fr}}
+
+  /* ===== ЭКСКУРСИИ — ГОРИЗОНТАЛЬНЫЕ РЕЙЛЫ ===== */
+  .subhead{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:46px 0 2px}
+  .subhead:first-of-type{margin-top:6px}
+  .subhead h3{font-size:clamp(22px,3vw,30px)}
+  .subhead p{font-size:13.5px;color:var(--ink-2);font-weight:600;white-space:nowrap}
+
+  .railx{position:relative;margin:0 -22px}
+  .rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 22px 18px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab}
+  .rail::-webkit-scrollbar{display:none}
+  .tcard{scroll-snap-align:start;flex:0 0 300px;text-align:left;cursor:pointer;border:1px solid var(--line);
+    background:var(--paper);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;
+    box-shadow:var(--shadow-soft);transition:transform .35s,box-shadow .35s;color:inherit}
+  .tcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .tcard .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
+  .tcard .im{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .tcard:hover .im{transform:scale(1.08)}
+  .tcard .tags{position:absolute;left:13px;top:13px;display:flex;gap:7px;flex-wrap:wrap;z-index:2}
+  .tag{background:rgba(8,18,26,.66);backdrop-filter:blur(6px);color:#fff;border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px;font-size:11.5px;font-weight:700}
+  .tag.hit{background:var(--brick);color:#fff}
+  .tag.star{background:var(--gold);color:#3a2a08}
+  .tcard .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+  .tcard .meta{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+  .tcard h3{font-size:20px;font-weight:700;margin-bottom:14px;line-height:1.2}
+  .tcard .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
+  .price b{font-family:'Playfair Display',serif;font-size:23px;font-weight:700;white-space:nowrap}
+  .price small{display:block;font-size:11px;color:var(--ink-2);font-weight:600}
+  .more{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--brick)}
+  .more svg{width:15px;height:15px;transition:transform .3s}
+  .tcard:hover .more svg{transform:translateX(3px)}
+  /* карточка-конструктор */
+  .tcard.build{background:linear-gradient(150deg,var(--blue),var(--blue-2));color:#fff;border-color:transparent}
+  .tcard.build .ph{aspect-ratio:4/3;display:grid;place-items:center;background:none}
+  .tcard.build .ph .big-ic{width:64px;height:64px;border-radius:18px;background:rgba(255,255,255,.12);display:grid;place-items:center}
+  .tcard.build .ph .big-ic svg{width:32px;height:32px;color:var(--gold)}
+  .tcard.build .meta{color:#f0cf8d}
+  .tcard.build .foot{border-top-color:rgba(255,255,255,.18)}
+  .tcard.build .price small{color:rgba(255,255,255,.7)}
+  .tcard.build .more{color:#f3d493}
+
+  .nav-btn{position:absolute;top:42%;width:46px;height:46px;border-radius:50%;background:rgba(17,42,58,.92);border:1px solid rgba(255,255,255,.16);
+    box-shadow:var(--shadow-soft);display:grid;place-items:center;cursor:pointer;z-index:6;transition:.25s;color:#fff;backdrop-filter:blur(6px)}
+  .nav-btn:hover{background:var(--brick);color:#fff;border-color:transparent}
+  .nav-btn svg{width:20px;height:20px}
+  .nav-btn.prev{left:6px}.nav-btn.next{right:6px}
+  @media(max-width:880px){.nav-btn{display:none}}
+  @media(max-width:560px){.tcard{flex:0 0 82%}}
+
+  .tours-note{margin-top:40px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+    padding:24px 26px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow-soft)}
+  .tours-note .ic{width:50px;height:50px;border-radius:14px;background:rgba(31,125,119,.12);color:var(--teal);display:grid;place-items:center;flex:none}
+  .tours-note .ic svg{width:26px;height:26px}
+  .tours-note p{flex:1;min-width:240px;color:var(--ink-2);font-size:15px}
+  .tours-note p b{color:var(--ink)}
+
+  /* ===== ЦИТАТА (плавный переход) ===== */
+  .band{position:relative;color:#fff;text-align:center;overflow:hidden;padding:clamp(108px,13vw,140px) 0}
+  .band .bg{position:absolute;inset:0;z-index:-2;background:url('img/6e647161-930d-4471-809b-dab252bc5b6f.webp') center/cover}
+  .band::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,var(--sand),rgba(10,26,36,0) 110px) top/100% 110px no-repeat,
+              linear-gradient(0deg,var(--sand),rgba(10,26,36,0) 110px) bottom/100% 110px no-repeat,
+              linear-gradient(rgba(10,22,32,.82),rgba(10,22,32,.82))}
+  .band .q{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(24px,4vw,46px);line-height:1.24;max-width:900px;margin:0 auto;color:#fff}
+  .band .q b{color:#f3d493;font-style:normal}
+  .band .by{margin-top:24px;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.82)}
+
+  /* ===== ПОЧЕМУ Я ===== */
+  .why{background:linear-gradient(180deg,var(--sand),var(--sand-2) 48%,var(--sand))}
+  .grid{display:grid;gap:22px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.g3{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.g3{grid-template-columns:1fr}}
+  .feat{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;transition:transform .35s,box-shadow .35s}
+  .feat:hover{transform:translateY(-6px);box-shadow:var(--shadow-soft)}
+  .feat .ic{width:54px;height:54px;border-radius:14px;background:rgba(177,78,46,.1);color:var(--brick);display:grid;place-items:center;margin-bottom:16px}
+  .feat .ic svg{width:26px;height:26px}
+  .feat h3{font-size:19px;margin-bottom:8px}
+  .feat p{color:var(--ink-2);font-size:14.5px}
+
+  /* ===== ОБО МНЕ ===== */
+  .about{display:grid;grid-template-columns:.85fr 1fr;gap:60px;align-items:center}
+  .about .pic{position:relative}
+  .about .pic .im{aspect-ratio:4/5;background:url('guide.jpg') center/cover;border-radius:var(--arch);box-shadow:var(--shadow)}
+  .about .pic .badge{position:absolute;right:-12px;bottom:24px;background:var(--paper);border-radius:18px;padding:15px 19px;box-shadow:var(--shadow);text-align:center;border:1px solid var(--line)}
+  .about .pic .badge b{font-family:'Playfair Display',serif;font-size:28px;color:var(--brick);display:block;line-height:1}
+  .about .pic .badge small{font-size:11px;color:var(--ink-2);font-weight:600}
+  .about .pic::before{content:"";position:absolute;inset:-16px -16px 40px 30px;z-index:-1;border:1.5px solid var(--gold);border-radius:var(--arch);opacity:.5}
+  .about p{color:var(--ink-2);margin-bottom:14px}
+  .about p.first{color:var(--ink);font-size:17.5px;font-weight:500}
+  .chips{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0 24px}
+  .chip{display:inline-flex;align-items:center;gap:7px;background:var(--paper);border:1px solid var(--line);padding:9px 15px;border-radius:999px;font-weight:700;font-size:13.5px}
+  .chip .s{color:var(--gold)}
+  @media(max-width:840px){.about{grid-template-columns:1fr;gap:42px}.about .pic{max-width:360px;margin:0 auto}}
+
+  /* ===== ГАЛЕРЕЯ — ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ + ЛАЙТБОКС ===== */
+  .gal-rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0;padding:14px 22px 16px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab}
+  .gal-rail::-webkit-scrollbar{display:none}
+  .gcell{position:relative;flex:0 0 auto;height:340px;border-radius:18px;overflow:hidden;cursor:pointer;scroll-snap-align:center;
+    box-shadow:var(--shadow-soft)}
+  .gcell.w-s{width:260px}.gcell.w-m{width:330px}.gcell.w-l{width:440px}
+  .gcell .im{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .gcell:hover .im{transform:scale(1.08)}
+  .gcell::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,22,32,.4),transparent 45%);opacity:0;transition:.3s}
+  .gcell:hover::after{opacity:1}
+  .gcell .zoom{position:absolute;right:14px;bottom:14px;width:40px;height:40px;border-radius:50%;background:rgba(8,18,26,.6);border:1px solid rgba(255,255,255,.2);
+    display:grid;place-items:center;opacity:0;transform:scale(.8);transition:.3s;z-index:2;backdrop-filter:blur(4px)}
+  .gcell:hover .zoom{opacity:1;transform:none}
+  .gcell .zoom svg{width:18px;height:18px;color:#fff}
+  .gal-hint{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:var(--ink-2);font-size:13px;font-weight:600}
+  .gal-hint svg{width:18px;height:18px}
+  @media(max-width:560px){.gcell{height:280px}.gcell.w-l{width:300px}.gcell.w-m{width:250px}.gcell.w-s{width:210px}}
+
+  /* ===== ОТЗЫВЫ — ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ ===== */
+  .reviews{position:relative;color:#fff;overflow:hidden;padding:132px 0;
+    background:linear-gradient(180deg,var(--sand),rgba(10,26,36,0) 110px) top/100% 110px no-repeat,
+              linear-gradient(0deg,var(--sand),rgba(10,26,36,0) 110px) bottom/100% 110px no-repeat,
+              var(--blue)}
+  .reviews::before{content:"";position:absolute;inset:0;opacity:.1;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52'%3E%3Cg fill='none' stroke='%23c0913c' stroke-width='1'%3E%3Cpath d='M26 2L50 26 26 50 2 26Z'/%3E%3Cpath d='M26 16L36 26 26 36 16 26Z'/%3E%3C/g%3E%3C/svg%3E")}
+  .reviews .wrap{position:relative}
+  .reviews .kicker{color:var(--gold)}
+  .rev-rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -22px;padding:14px 22px 20px;
+    align-items:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab}
+  .rev-rail::-webkit-scrollbar{display:none}
+  .rev{scroll-snap-align:start;flex:0 0 358px;min-height:338px;display:flex;flex-direction:column;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:24px 24px 22px;backdrop-filter:blur(2px)}
+  .rev .st{color:var(--gold);letter-spacing:3px;margin-bottom:8px;font-size:15px}
+  .rev .src{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9cc2d6;margin-bottom:12px}
+  .rev p{font-size:14.5px;line-height:1.62;color:rgba(255,255,255,.92);margin-bottom:8px;min-height:142px;
+    display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+  .rev.exp p{-webkit-line-clamp:unset;overflow:visible;min-height:0}
+  .rev .toggle{background:none;border:0;color:#f3d493;font-weight:700;font-size:13px;cursor:pointer;padding:2px 0;margin-bottom:12px;text-align:left}
+  .rev .who{margin-top:auto;font-weight:700;font-size:14px;display:flex;align-items:center;gap:10px;border-top:1px solid rgba(255,255,255,.14);padding-top:14px}
+  .rev .who .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--gold),var(--brick));display:grid;place-items:center;
+    color:#fff;font-weight:800;font-size:15px;flex:none;font-family:'Playfair Display',serif}
+  .rev .who small{display:block;color:rgba(255,255,255,.6);font-weight:600;margin-top:2px}
+  @media(max-width:560px){.rev{flex:0 0 84%}}
+
+  /* ===== FAQ ===== */
+  .faq{max-width:820px;margin:0 auto}
+  .faq details{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 24px;margin-bottom:12px;transition:box-shadow .25s,border-color .25s}
+  .faq details[open]{box-shadow:var(--shadow-soft);border-color:var(--brick)}
+  .faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:16.5px;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--brick);font-size:26px;font-weight:300;transition:transform .25s;flex:none;line-height:1}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq p{color:var(--ink-2);margin-top:12px;font-size:14.5px}
+
+  /* ===== CTA + ФОРМА ===== */
+  .cta{position:relative;color:#fff;text-align:center;overflow:hidden;padding:clamp(108px,13vw,134px) 0}
+  .cta .bg{position:absolute;inset:0;z-index:-2;background:url('img/photo_10_2026-06-04_14-40-04.jpg') center/cover}
+  .cta::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,var(--sand),rgba(10,26,36,0) 110px) top/100% 110px no-repeat,
+              linear-gradient(0deg,#081722,rgba(8,23,34,0) 150px) bottom/100% 150px no-repeat,
+              linear-gradient(rgba(10,22,32,.8),rgba(10,22,32,.84))}
+  .cta h2{margin-bottom:14px}
+  .cta p{max-width:560px;margin:0 auto 28px;color:rgba(255,255,255,.9);font-size:17.5px}
+  .cta .hero-cta{justify-content:center}
+  .form{background:var(--paper);color:var(--ink);border-radius:var(--r);padding:clamp(24px,4vw,38px);box-shadow:var(--shadow);max-width:560px;margin:42px auto 0;text-align:left}
+  .form h3{font-size:24px;margin-bottom:18px}
+  .form label{display:block;font-weight:700;font-size:13.5px;margin-bottom:6px}
+  .form input,.form select,.form textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:12px;font:inherit;margin-bottom:14px;background:var(--sand);transition:border-color .2s,box-shadow .2s}
+  .form input:focus,.form select:focus,.form textarea:focus{outline:0;border-color:var(--brick);box-shadow:0 0 0 3px rgba(177,78,46,.15)}
+  .form .btn{width:100%}
+
+  /* ===== ПОДВАЛ ===== */
+  footer{background:#081722;color:#8499a8;padding:54px 0 28px;font-size:14.5px}
+  footer a{color:#f1e7d4;transition:color .2s}
+  footer a:hover{color:var(--gold)}
+  .foot{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start;margin-bottom:28px}
+  .foot .soc{display:flex;gap:20px;flex-wrap:wrap}
+  .foot .brand b{color:#fff}
+  .foot .brand .sub{color:#f0d9a8}
+  .copy{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;color:#5f7382;font-size:13px}
+
+  /* плавающая кнопка */
+  .fab{position:fixed;right:18px;bottom:18px;z-index:80;background:#1f8a4c;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 16px 30px -10px rgba(31,138,76,.8);transition:transform .25s}
+  .fab:hover{transform:scale(1.08)}
+  .fab svg{width:27px;height:27px}
+  .fab::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #2bd06f;animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+
+  /* появление при скролле */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+  .reveal.in{opacity:1;transform:none}
+
+  /* полоса прогресса */
+  .progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:95;background:transparent;pointer-events:none}
+  .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brick),var(--gold));box-shadow:0 0 10px rgba(192,145,60,.6)}
+  .count{font-variant-numeric:tabular-nums}
+  .btn-brick,.btn-wa{position:relative;overflow:hidden}
+  .btn-brick>*,.btn-wa>*{position:relative;z-index:1}
+  .btn-brick::before,.btn-wa::before{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;z-index:0;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-18deg);transition:left .65s ease}
+  .btn-brick:hover::before,.btn-wa:hover::before{left:140%}
+  @media(prefers-reduced-motion:reduce){.brand:hover .mk svg{transform:none}.btn-brick::before,.btn-wa::before{display:none}.reveal{transition:none}}
+
+  /* ===== МОДАЛКА ТУРА ===== */
+  .modal{position:fixed;inset:0;z-index:120;display:none;align-items:flex-start;justify-content:center;padding:28px 16px;
+    overflow:auto;background:rgba(10,18,24,.6);backdrop-filter:blur(6px)}
+  .modal.open{display:flex}
+  .modal .box{background:var(--paper);border-radius:24px;max-width:760px;width:100%;overflow:hidden;box-shadow:var(--shadow);animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+  @keyframes pop{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:none}}
+  .modal .m-img{position:relative;aspect-ratio:16/9;background-size:cover;background-position:center;background-color:var(--blue)}
+  .modal .m-img .badge{position:absolute;left:18px;bottom:16px;background:var(--brick);color:#fff;font-weight:700;font-size:12.5px;padding:7px 14px;border-radius:999px}
+  .m-close{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:rgba(10,18,24,.5);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(4px);transition:.2s;z-index:3}
+  .m-close:hover{background:rgba(10,18,24,.8)}
+  .m-close svg{width:20px;height:20px}
+  .m-body{padding:clamp(22px,4vw,30px)}
+  .m-meta{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+  .m-body h3{font-size:clamp(24px,4vw,30px);margin-bottom:8px}
+  .m-price{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--brick);margin-bottom:18px}
+  .m-price span{font-family:'Manrope';font-size:13px;color:var(--ink-2);font-weight:600}
+  .m-desc{color:var(--ink-2);font-size:15px}
+  .m-desc p{margin-bottom:12px}
+  .thumbs{display:flex;gap:10px;overflow-x:auto;margin:18px 0 6px;padding-bottom:6px;scrollbar-width:none;cursor:grab}
+  .thumbs::-webkit-scrollbar{display:none}
+  .grabbing{cursor:grabbing!important;scroll-snap-type:none!important;user-select:none}
+  .thumbs .t{flex:0 0 96px;aspect-ratio:4/3;border-radius:12px;background-size:cover;background-position:center;cursor:pointer;border:2px solid transparent;transition:.2s}
+  .thumbs .t.active{border-color:var(--brick)}
+  .incl{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;margin:18px 0 22px}
+  .incl li{list-style:none;display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--ink)}
+  .incl li svg{width:18px;height:18px;color:var(--teal);flex:none;margin-top:2px}
+  .m-cta{display:flex;gap:10px;flex-wrap:wrap}
+  @media(max-width:560px){.modal{padding:0}.modal .box{border-radius:0;min-height:100%}.incl{grid-template-columns:1fr}}
+
+  /* ===== ЛАЙТБОКС ===== */
+  .lb{position:fixed;inset:0;z-index:130;display:none;align-items:center;justify-content:center;background:rgba(8,10,14,.94);padding:20px}
+  .lb.open{display:flex}
+  .lb figure{margin:0;text-align:center;max-width:94vw}
+  .lb img{max-width:94vw;max-height:84vh;border-radius:12px;box-shadow:0 30px 80px -20px rgba(0,0,0,.8);animation:pop .3s}
+  .lb .cap{color:rgba(255,255,255,.7);font-size:13px;margin-top:12px}
+  .lb-btn{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:.2s;backdrop-filter:blur(4px)}
+  .lb-btn:hover{background:rgba(255,255,255,.26)}
+  .lb-btn svg{width:24px;height:24px}
+  .lb-close{top:18px;right:20px}
+  .lb-prev{left:14px;top:50%;transform:translateY(-50%)}
+  .lb-next{right:14px;top:50%;transform:translateY(-50%)}
+  @media(max-width:560px){.lb-prev{left:6px}.lb-next{right:6px}.lb-btn{width:44px;height:44px}}
+</style>
+</head>
+<body>
+
+<div class="progress"><i></i></div>
+
+<!-- ШАПКА -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="1.4"/><rect x="5" y="5" width="14" height="14" rx="1.4" transform="rotate(45 12 12)"/></g><circle cx="12" cy="12" r="2.4" fill="#0f3a52"/></svg></span>
+      <span><b>Аврам</b><span class="sub">Travel · Узбекистан</span></span>
+    </a>
+    <nav class="menu">
+      <a href="#tours" class="lnk">Экскурсии</a>
+      <a href="#about" class="lnk">О нас</a>
+      <a href="#reviews" class="lnk">Отзывы</a>
+      <a href="#faq" class="lnk">Вопросы</a>
+      <a href="#booking" class="btn btn-brick">Забронировать</a>
+      <button class="burger" id="burger" aria-label="Меню"><i></i><i></i><i></i></button>
+    </nav>
+  </div>
+  <div class="mobile" id="mobile">
+    <a href="#tours">Экскурсии</a>
+    <a href="#about">О нас</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#faq">Вопросы</a>
+    <a href="#booking" class="btn btn-brick">Забронировать экскурсию</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="hero-in">
+      <span class="hero-loc">Самарканд · Бухара · Хива · Ташкент</span>
+      <h1>Узбекистан, каким его знают <em>местные</em></h1>
+      <p>Бирюзовые купола Самарканда, тишина горных озёр и горячие лепёшки из тандыра. Все наши гиды родом из Узбекистана и в совершенстве знают историю страны. Индивидуально или малой группой — в темпе, удобном именно вам.</p>
+      <div class="hero-cta">
+        <a href="#tours" class="btn btn-brick">Выбрать экскурсию <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="msg-row">
+        <span class="lbl">Написать:</span>
+        <a href="https://wa.me/998900000000" class="msg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>WhatsApp</a>
+        <a href="https://t.me/your_username" class="msg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 2.9 11.6c-1 .4-1 1.7 0 2l4.8 1.5L9.4 21c.3.8 1.3.9 1.9.3l2.6-2.6 4.7 3.5c.7.5 1.6.1 1.8-.7L23 5.7c.2-1-.4-1.8-1.1-1.4Zm-3.6 4-7.4 6.6c-.3.2-.4.6-.4.9l-.3 2.6-1.3-4.4 8.7-5.6c.4-.3.8.2.7.3Z"/></svg>Telegram</a>
+        <a href="https://max.ru/" class="msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 4V6a1 1 0 011-1z"/><path d="M8.5 13l1.6-3.5 1.9 3 1.9-3L16.5 13" stroke-linecap="round" stroke-linejoin="round"/></svg>Max</a>
+      </div>
+      <div class="hero-stats">
+        <div><b class="count" data-to="4.99" data-dec="2">4,99</b><small>★ наш рейтинг</small></div>
+        <div><b class="count" data-to="3000" data-suf="+">3000+</b><small>довольных гостей</small></div>
+        <div><b class="count" data-to="8" data-suf="">8</b><small>авторских маршрутов</small></div>
+      </div>
+      <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 109-9M3 12v-5M3 12h5"/></svg>Многие гости возвращаются к нам снова — и привозят друзей</div>
+    </div>
+  </div>
+  <div class="scrollcue">листайте<span></span></div>
+</section>
+
+<!-- ЛЕНТА ДОВЕРИЯ -->
+<section class="strip">
+  <div class="wrap">
+    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6L2.8 9.3l6.8-.5z"/></svg></span><span><b>4,99</b> из 5 — наш рейтинг</span></div>
+    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M21 7v6M3 11v4c0 2 4 4 9 4s9-2 9-4v-4"/></svg></span><span>Все гиды родом из Узбекистана</span></div>
+    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-9 8.4L3 21l1.1-3a8.5 8.5 0 1116.9-6.5z"/></svg></span><span><b>3000+</b> гостей · многие возвращаются</span></div>
+    <div class="it"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Индивидуально и малыми группами</span></div>
+  </div>
+</section>
+
+<!-- ЭКСКУРСИИ -->
+<section id="tours">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="kicker">Маршруты</span>
+      <h2>Экскурсии и авторские туры</h2>
+      <p class="lead" style="margin:14px auto 0">От бирюзовых куполов до тишины горных озёр и восточных базаров. Нажмите на карточку — расскажу о маршруте подробно и покажу фото.</p>
+    </div>
+
+    <div class="subhead reveal">
+      <h3>Экскурсии на один день</h3>
+      <p>Листайте вбок →</p>
+    </div>
+    <div class="railx reveal">
+      <button class="nav-btn prev" data-rail="rail-day" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div class="rail" id="rail-day"></div>
+      <button class="nav-btn next" data-rail="rail-day" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+
+    <div class="subhead reveal">
+      <h3>Многодневные туры под ключ</h3>
+      <p>Листайте вбок →</p>
+    </div>
+    <div class="railx reveal">
+      <button class="nav-btn prev" data-rail="rail-multi" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div class="rail" id="rail-multi"></div>
+      <button class="nav-btn next" data-rail="rail-multi" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+
+    <div class="tours-note reveal">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2 5 5 .4-3.8 3.3 1.2 5L12 18l-4.6 2.7 1.2-5L4.8 7.4 9.8 7z"/></svg></span>
+      <p><b>Не нашли подходящий вариант?</b> Помимо готовых программ соберём маршрут под ваши интересы и даты — пеший или на автомобиле. Все машины в отличном состоянии и с кондиционером. Индивидуально или малой группой.</p>
+      <a href="#booking" class="btn btn-brick">Собрать свой маршрут</a>
+    </div>
+  </div>
+</section>
+
+<!-- ЦИТАТА -->
+<section class="band">
+  <div class="bg"></div>
+  <div class="wrap">
+    <p class="q reveal">«Мы не просто проводим экскурсии — мы дарим <b>впечатления и воспоминания</b>, ради которых хочется вернуться снова»</p>
+    <div class="by reveal">— Аврам и команда гидов по Узбекистану</div>
+  </div>
+</section>
+
+<!-- ПОЧЕМУ Я -->
+<section class="why">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="kicker">Почему гости выбирают нас</span>
+      <h2>Путешествие, которое<br>хочется повторить</h2>
+    </div>
+    <div class="grid g3">
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9 6.3 20.3l1.7-6.6L2.8 9.3l6.8-.5z"/></svg></div>
+        <h3>Местные, а не «по учебнику»</h3><p>Все гиды родом из Узбекистана и в совершенстве знают историю страны. Живые истории и места, о которых знают только местные.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0113 0M16 5.5a3 3 0 010 5.5M21.5 20a6 6 0 00-5-5.9"/></svg></div>
+        <h3>Индивидуально и малыми группами</h3><p>Формат на ваш выбор — личная экскурсия или небольшая компания. Темп подстраиваем под каждого, без спешки и толпы.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11l1-5h12l1 5M3 11h18v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3z"/><circle cx="7.5" cy="18.5" r="1.6"/><circle cx="16.5" cy="18.5" r="1.6"/></svg></div>
+        <h3>Комфортный транспорт</h3><p>Пеший формат или поездка на автомобиле — все машины в отличном состоянии и с кондиционером. Берём логистику на себя.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 7l1.5 12.5a1 1 0 001 .9h11a1 1 0 001-.9L19 7M9 7V5a3 3 0 016 0v2"/></svg></div>
+        <h3>Маршрут под вас</h3><p>Готовые программы или индивидуальный маршрут под ваши интересы: история, фото, гастрономия, горы или базары.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-9 8.4L3 21l1.1-3a8.5 8.5 0 1116.9-6.5z"/></svg></div>
+        <h3>На связи 24/7</h3><p>WhatsApp, Telegram и Max — отвечаем до, во время и после поездки. Поможем с любым вопросом по стране.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 4.8 5.5 5.5 0 0121.5 12C19 16.5 12 21 12 21z"/></svg></div>
+        <h3>Гастрономия и колорит</h3><p>Плов, тандыр, чайханы и базары — покажем вкус настоящего Востока и тёплое узбекское гостеприимство.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ОБО МНЕ -->
+<section id="about">
+  <div class="wrap about">
+    <div class="pic reveal">
+      <div class="im"></div>
+      <div class="badge"><b>4,99</b><small>3000+ гостей</small></div>
+    </div>
+    <div class="reveal">
+      <span class="kicker">О нас</span>
+      <h2>Привет! Я — Аврам,<br>ваш гид по Узбекистану</h2>
+      <div class="chips">
+        <span class="chip"><span class="s">★</span> 4,99 рейтинг</span>
+        <span class="chip">3000+ гостей</span>
+        <span class="chip">гиды из Узбекистана</span>
+      </div>
+      <p class="first">Я родился и вырос в древнем Самарканде — городе, где каждая улица хранит историю Великого шёлкового пути. Со мной команда гидов, искренне влюблённых в Узбекистан: все мы родом из этой страны и в совершенстве знаем её историю.</p>
+      <p>Мы показываем гостям настоящий Узбекистан: величественные древние города, шумные восточные базары, уникальную кухню, тёплое гостеприимство и места, о которых знают только местные.</p>
+      <p>Экскурсии проводим индивидуально или малыми группами — в темпе, удобном каждому. Многие гости возвращаются к нам снова. Добро пожаловать в Узбекистан!</p>
+      <a href="#booking" class="btn btn-brick" style="margin-top:22px">Забронировать экскурсию <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ГАЛЕРЕЯ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="kicker">Галерея</span>
+      <h2>Узбекистан крупным планом</h2>
+    </div>
+    <div class="railx reveal">
+      <button class="nav-btn prev" data-rail="galRail" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div class="gal-rail" id="galRail"></div>
+      <button class="nav-btn next" data-rail="galRail" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="gal-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M5 12l4-4M5 12l4 4M19 12l-4-4M19 12l-4 4"/></svg>Листайте вбок и нажмите на фото, чтобы открыть</div>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="kicker">Отзывы</span>
+      <h2 style="color:#fff">Что говорят гости</h2>
+      <p class="lead" style="margin:14px auto 0;color:rgba(255,255,255,.8)">Все отзывы — на 5 звёзд. Листайте вбок, чтобы прочитать.</p>
+    </div>
+    <div class="rev-rail reveal" id="revRail"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="why">
+  <div class="wrap">
+    <div class="head center reveal"><span class="kicker">Вопросы</span><h2>Частые вопросы</h2></div>
+    <div class="faq reveal">
+      <details open><summary>Как забронировать экскурсию?</summary><p>Напишите нам в WhatsApp, Telegram или Max — либо оставьте заявку через форму ниже. Согласуем дату, маршрут и все детали.</p></details>
+      <details><summary>Можно ли собрать индивидуальный маршрут?</summary><p>Да, это наша любимая часть работы. Помимо готовых программ соберём маршрут под ваши интересы, даты и бюджет — пеший или на автомобиле.</p></details>
+      <details><summary>В каком формате проходят экскурсии?</summary><p>Индивидуально или малыми группами — на ваш выбор. Темп и подачу подстраиваем под каждого, включая семьи с детьми и пожилых гостей.</p></details>
+      <details><summary>На чём передвигаемся?</summary><p>Пешком по историческим центрам или на автомобиле между объектами и городами. Все машины в отличном состоянии и с кондиционером.</p></details>
+      <details><summary>На каком языке проходят экскурсии?</summary><p>Проводим экскурсии на русском, английском и узбекском языках.</p></details>
+      <details><summary>Что входит в стоимость?</summary><p>Услуги гида и сопровождение по маршруту. Транспорт, входные билеты и питание уточняются по каждому туру — точную смету пришлём заранее. Цены указаны в долларах, «от».</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA + ФОРМА -->
+<section id="booking" class="cta">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker light" style="justify-content:center;display:flex">Бронирование</span>
+      <h2>Готовы увидеть<br>настоящий Узбекистан?</h2>
+      <p>Напишите прямо сейчас — ответим в течение нескольких часов и поможем спланировать идеальное путешествие.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/998900000000" class="btn btn-light-ghost"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>WhatsApp</a>
+        <a href="https://t.me/your_username" class="btn btn-light-ghost">Telegram</a>
+        <a href="https://max.ru/" class="btn btn-light-ghost">Max</a>
+      </div>
+    </div>
+
+    <!-- Форма отправляет заявку вам на e-mail через Formspree.
+         Зарегистрируйтесь на formspree.io и вставьте свой ID вместо YOUR_ID -->
+    <form class="form reveal" action="https://formspree.io/f/YOUR_ID" method="POST">
+      <h3>Оставить заявку</h3>
+      <label>Ваше имя</label>
+      <input type="text" name="name" placeholder="Как к вам обращаться?" required>
+      <label>Телефон / WhatsApp</label>
+      <input type="text" name="phone" placeholder="+998 ..." required>
+      <label>Какая экскурсия интересует?</label>
+      <select name="tour" id="formTour">
+        <option>Хафткул: семь озёр</option>
+        <option>Самарканд — с душой и огоньком</option>
+        <option>Самарканд → Шахрисабз</option>
+        <option>Чимган и Амирсой (из Ташкента)</option>
+        <option>Трансфер Самарканд — Шахрисабз</option>
+        <option>Экспресс по сердцу страны (2 дня)</option>
+        <option>Тур: Ташкент · Бухара · Самарканд</option>
+        <option>Тур: Хива · Самарканд · Бухара · Ташкент</option>
+        <option>Индивидуальный маршрут</option>
+      </select>
+      <label>Дата и пожелания</label>
+      <textarea name="message" rows="3" placeholder="Когда планируете, сколько человек, особые пожелания"></textarea>
+      <button type="submit" class="btn btn-brick">Отправить заявку <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </form>
+  </div>
+</section>
+
+<!-- ПОДВАЛ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="brand" style="margin-bottom:12px">
+          <span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="1.4"/><rect x="5" y="5" width="14" height="14" rx="1.4" transform="rotate(45 12 12)"/></g><circle cx="12" cy="12" r="2.4" fill="#0f3a52"/></svg></span><span><b>Аврам</b><span class="sub">Travel · Узбекистан</span></span>
+        </a>
+        <div style="max-width:360px;color:#7d93a1">Авторские экскурсии и туры по Самарканду, Бухаре, Хиве и горам. Наш рейтинг 4,99 · более 3000 довольных гостей.</div>
+      </div>
+      <div class="soc">
+        <a href="https://wa.me/998900000000">WhatsApp</a>
+        <a href="https://t.me/your_username">Telegram</a>
+        <a href="https://max.ru/">Max</a>
+        <a href="https://instagram.com/your_username">Instagram</a>
+        <a href="tel:+998900000000">+998 90 000 00 00</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Аврам · гид по Узбекистану. Все права защищены.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/998900000000" class="fab" title="Написать в WhatsApp" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
+</a>
+
+<!-- МОДАЛКА ТУРА -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="box" role="dialog" aria-modal="true">
+    <div class="m-img" id="mImg"><span class="badge" id="mBadge"></span>
+      <button class="m-close" id="mClose" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="m-body">
+      <div class="m-meta" id="mMeta"></div>
+      <h3 id="mTitle"></h3>
+      <div class="m-price" id="mPrice"></div>
+      <div class="thumbs" id="mThumbs"></div>
+      <div class="m-desc" id="mDesc"></div>
+      <ul class="incl" id="mIncl"></ul>
+      <div class="m-cta">
+        <a href="#booking" class="btn btn-brick" id="mBook">Забронировать <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="https://wa.me/998900000000" class="btn btn-ghost-d">Спросить в WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ЛАЙТБОКС -->
+<div class="lb" id="lb" aria-hidden="true">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <figure><img id="lbImg" src="" alt="Фото из путешествия по Узбекистану"><figcaption class="cap" id="lbCap"></figcaption></figure>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+
+<script>
+  const IMG='img/';
+  // ===== ДАННЫЕ ТУРОВ =====
+  const TOURS=[
+    {id:'haftkul',cat:'day',title:'Хафткул: семь удивительных озёр',meta:'Целый день · из Самарканда · авто 4×4',
+     price:'от $90',unit:'с человека',badge:'★ Хит',badgeClass:'hit',img:IMG+'08720ccc-275b-46ee-a93c-3a39278c4365.jpg',
+     long:`<p>Раннее утро, выезд от вашего отеля — и впереди целый день среди Фанских гор. Мы пересекаем границу с Таджикистаном и на полноприводном автомобиле с опытным водителем поднимаемся к каскаду из семи озёр, каждое со своим цветом и формой воды.</p><p>По дороге — рассказы о традициях, быте и истории двух стран, остановки на лучших панорамах и пикник на берегу. Маки вдоль дороги, кристальный горный воздух и тишина, которую невозможно забыть.</p>`,
+     incl:['Трансфер от отеля и обратно','Полноприводный авто с водителем','Сопровождение гида весь день','Пикник на берегу озера','Помощь на границе'],
+     gallery:[IMG+'d5bfb65b-37ce-43f8-8927-984cca16e890.webp',IMG+'70b8d3d7-aecf-441f-baf5-76946eeded5b.webp',IMG+'photo_9_2026-06-04_14-40-04.jpg',IMG+'19aeae09-2658-497f-92e5-444be9e6edde.webp']},
+
+    {id:'samarkand',cat:'day',title:'Самарканд — с душой и огоньком',meta:'Групповая · Самарканд · ~6 часов',
+     price:'от $35',unit:'с человека',badge:'Группа',badgeClass:'star',img:IMG+'f06fb4e8-3c31-4d86-be99-b6f2454ffd06.jpg',
+     long:`<p>Классический Самарканд за один насыщенный день: площадь Регистан, мавзолей Гур-Эмир, мечеть Биби-Ханым и сияющий некрополь Шахи-Зинда. Живые истории, легенды и детали, которые обычно проходят мимо туристов.</p><p>Небольшая группа, спокойный темп и время на фотографии в самых красивых ракурсах. Подскажем, где вкусно поесть и что привезти с базара.</p>`,
+     incl:['Сопровождение гида','Маршрут по главным памятникам','Помощь с фотографиями','Советы по кухне и базарам'],
+     gallery:[IMG+'photo_3_2026-06-04_14-40-04.jpg',IMG+'812c7a3a-f899-4cd7-a518-c0153e70d5a8.jpg',IMG+'photo_8_2026-06-04_14-40-04.jpg',IMG+'0ea78151-bbc0-4282-9314-d27faed68328.jpg']},
+
+    {id:'shahrisabz',cat:'day',title:'Из Самарканда в Шахрисабз',meta:'Целый день · авто · индивидуально',
+     price:'от $120',unit:'за экскурсию',badge:'Индивидуально',badgeClass:'',img:IMG+'af9fcf20-83ae-4e34-bf3c-733222e80127.jpg',
+     long:`<p>Поездка на родину Амира Темура через живописный горный перевал. Грандиозный дворец Ак-Сарай, древние мавзолеи и неспешная атмосфера маленького города вдали от туристических потоков.</p><p>Индивидуально, на комфортном автомобиле с кондиционером — выезжаем тогда, когда удобно вам.</p>`,
+     incl:['Автомобиль с кондиционером','Опытный водитель','Сопровождение гида','Остановки на перевале для фото'],
+     gallery:[IMG+'7a0ed618-3f95-47be-b06d-ecb7ebb8d7d6.webp',IMG+'photo_6_2026-06-04_14-40-04.jpg',IMG+'6fd2e413-198f-412c-a155-c7014dc9ab43.webp']},
+
+    {id:'chimgan',cat:'day',title:'Чимган и Амирсой из Ташкента',meta:'Целый день · горы Тянь-Шаня',
+     price:'от $150',unit:'за экскурсию',badge:'из Ташкента',badgeClass:'',img:IMG+'photo_1_2026-06-04_14-40-04.jpg',
+     long:`<p>День в горах Тянь-Шаня недалеко от Ташкента: канатная дорога курорта Амирсой, панорамы Чимгана и бирюзовое Чарвакское водохранилище.</p><p>Глоток свежего воздуха и природы — идеальный контраст шумному городу.</p>`,
+     incl:['Трансфер из Ташкента','Сопровождение гида','Подъём по канатной дороге (по желанию)','Остановки на лучших видах'],
+     gallery:[IMG+'19aeae09-2658-497f-92e5-444be9e6edde.webp',IMG+'64c297b0-bad3-45be-a84b-d2450aaac0e2.webp',IMG+'photo_5_2026-06-04_14-40-04.jpg',IMG+'photo_4_2026-06-04_14-40-04.jpg']},
+
+    {id:'transfer',cat:'day',title:'Трансфер Самарканд — Шахрисабз',meta:'Туда и обратно · авто · через перевал',
+     price:'от $80',unit:'за поездку',badge:'Трансфер',badgeClass:'',img:IMG+'7a0ed618-3f95-47be-b06d-ecb7ebb8d7d6.webp',
+     long:`<p>Комфортный трансфер туда-обратно через горный перевал с остановками на самых красивых точках. Отличный вариант, если хотите добраться с комфортом и сделать яркие кадры в пути.</p>`,
+     incl:['Автомобиль с кондиционером','Опытный водитель','Остановки для фото на перевале'],
+     gallery:[IMG+'af9fcf20-83ae-4e34-bf3c-733222e80127.jpg',IMG+'6fd2e413-198f-412c-a155-c7014dc9ab43.webp',IMG+'photo_6_2026-06-04_14-40-04.jpg']},
+
+    {id:'express',cat:'multi',title:'Экспресс по сердцу страны',meta:'2 дня · Ташкент → Самарканд → Конигил',
+     price:'от $450',unit:'за тур',badge:'2 дня',badgeClass:'star',img:IMG+'6c4b31d8-d468-49e6-bc43-e8284992467f.webp',
+     long:`<p>Концентрат Узбекистана за два дня: современный Ташкент, великолепный Самарканд и мастерская самаркандской бумаги в Конигиле. Идеально, когда времени мало, а увидеть хочется главное.</p><p>Трансферы, гид и вся логистика — берём на себя.</p>`,
+     incl:['Трансферы между городами','Сопровождение гида','Программа по Ташкенту и Самарканду','Мастер-классы и дегустации'],
+     gallery:[IMG+'photo_2_2026-06-04_14-40-04.jpg',IMG+'photo_7_2026-06-04_14-40-04.jpg',IMG+'2bbb9b51-5511-4736-a1c1-bad85687e351.webp']},
+
+    {id:'foryou',cat:'multi',title:'Узбекистан только для вас',meta:'Ташкент · Бухара · Самарканд · индивидуально',
+     price:'от $1400',unit:'за тур под ключ',badge:'★ Под ключ',badgeClass:'hit',img:IMG+'e7e90842-831a-4d3c-9633-3a02296ee7b4.webp',
+     long:`<p>Индивидуальный тур по трём великим городам Шёлкового пути под ваши даты и интересы — без чужих в группе. Внимательные гиды, личные автомобили с кондиционером и проверенные отели.</p><p>Темп и наполнение подстраиваем под вас: история, фото, гастрономия, шопинг.</p>`,
+     incl:['Все трансферы и переезды','Личные гиды в каждом городе','Подобранные отели','Гибкая программа под вас'],
+     gallery:[IMG+'6ca42075-daf9-4d90-a8a1-53303daac723.jpg',IMG+'075c8dcf-decf-413c-92c8-32769df58116.webp',IMG+'af7a8c1c-c9e3-43c4-84f5-d55a41c08d79.webp']},
+
+    {id:'skazka',cat:'multi',title:'Узбекистан сказочный',meta:'Хива · Самарканд · Бухара · Ташкент',
+     price:'от $1600',unit:'за тур под ключ',badge:'4 города',badgeClass:'',img:IMG+'5ea2d21f-f84b-4b33-99fd-88a006ee7cf9.webp',
+     long:`<p>Большое путешествие по четырём древним городам: загадочная Хива, узорчатая Бухара, величественный Самарканд и столичный Ташкент. Полное погружение в историю, ремёсла и кухню.</p><p>Насыщенно, но без спешки — с заботой о каждой детали, от трансферов до отелей.</p>`,
+     incl:['Маршрут по 4 городам','Все трансферы и сопровождение','Отели и логистика','Личный гид-куратор тура'],
+     gallery:[IMG+'e58b88ce-2b7c-48d6-abec-deb9ce464a02.jpg',IMG+'64c297b0-bad3-45be-a84b-d2450aaac0e2.webp',IMG+'photo_11_2026-06-04_14-40-04.jpg',IMG+'photo_12_2026-06-04_14-40-04.jpg']},
+
+    {id:'custom',cat:'multi',build:true,title:'Свой маршрут под вас',meta:'Любые города · любые даты',
+     price:'по запросу',unit:'',badge:'Конструктор',badgeClass:'',img:'',
+     long:`<p>Расскажите, что вам интересно — история, фотопрогулки, гастрономия, горы или базары — и мы соберём индивидуальный маршрут под ваши даты, темп и бюджет.</p><p>Пеший формат или на автомобиле с кондиционером (все машины в отличном состоянии). Индивидуально или малой группой.</p>`,
+     incl:['Маршрут под ваши интересы','Пешком или на авто с кондиционером','Индивидуально или малой группой','Любой город и любые даты'],
+     gallery:[IMG+'photo_10_2026-06-04_14-40-04.jpg',IMG+'6e647161-930d-4471-809b-dab252bc5b6f.webp',IMG+'photo_12_2026-06-04_14-40-04.jpg']}
+  ];
+  const TMAP={}; TOURS.forEach(t=>TMAP[t.id]=t);
+
+  // ===== ОТЗЫВЫ =====
+  const REVIEWS=[
+    {name:'Марина и Олег',city:'Москва',src:'Хафткул: семь озёр',
+     text:'Наше незабываемое путешествие началось в 8 утра у отеля. Всю дорогу гид интересно рассказывал обо всём: о традициях, о быте, об отношениях в семьях — в общем, о жизни двух стран. Границу прошли быстро и уже на полноприводной машине с водителем продолжили путь по Таджикистану. Дорога на озёра из щебёнки: массаж внешних и внутренних органов получили в полной мере) Виды завораживающие. Величественные горы обступают озёра, каждое разной формы и цвета воды. На седьмом озере был пикник — нас угостили вкусными бутербродами. Какой там ВОЗДУХ — будто прозрачный! По обочинам всю дорогу цветут маки: красные и редчайшие жёлтые. Очень рекомендуем эту экскурсию. Спасибо большое за великолепные впечатления!'},
+    {name:'Светлана',city:'Санкт-Петербург',src:'Хафткул: семь озёр',
+     text:'Тур на 7 озёр — это настоящая перезагрузка 🤍 Невероятная природа, кристально чистая вода разных оттенков и тишина, от которой захватывает дух. Очень комфортная организация, всё продумано до мелочей. Место, куда хочется вернуться ещё раз ✨ Лучший гид, обязательно обращайтесь за туром к нему!'},
+    {name:'Юлия',city:'Казань',src:'Узбекистан сказочный',
+     text:'Огромное спасибо гиду Авраму за экскурсию по Самарканду. Он очень глубоко знает историю, рассказывает интересно и замечает такие детали, которые обычно упускаешь. Он сделал наш день особенным. И отдельное спасибо за шикарные фотографии — теперь они будут напоминать нам об этом прекрасном путешествии.'},
+    {name:'Татьяна',city:'Минск',src:'Групповая экскурсия по Самарканду',
+     text:'Замечательная экскурсия по Самарканду с экскурсоводом Исломбеком. Прошла очень познавательно, интересно и легко. Несмотря на молодость, Исломбек уже имеет большой опыт и прекрасно владеет материалом. Он с глубоким уважением относится к традициям своего народа и с искренним теплом встречает гостей. Мы получили массу ярких впечатлений и узнали много нового. Искренне рекомендуем всем, кто хочет по-настоящему прочувствовать атмосферу Самарканда!'},
+    {name:'Андрей',city:'Екатеринбург',src:'Узбекистан только для вас',
+     text:'У нас была индивидуальная программа: Ташкент — Самарканд — Шахрисабз — Бухара. Все гиды были очень внимательные и эрудированные, за что им большое спасибо! Мы узнали для себя очень много нового и интересного. Отдельная благодарность руководителю тура Абрамжону за заботу о том, чтобы у нас всё было хорошо!'},
+    {name:'Ирина и Павел',city:'Новосибирск',src:'Узбекистан сказочный',
+     text:'Давно хотели съездить в Узбекистан, но думали ехать сами или через компанию. В итоге обратились к Авраму — и не пожалели. Семидневный тур по Ташкенту, Самарканду и Бухаре был очень насыщенным. Всё на высшем уровне: трансфер, гиды с машинами, гостиницы. В Самарканде Аврам сам возил нас на электромобиле. Его пунктуальность, знания и забота подтвердили, что мы выбрали правильного человека. Даже на рынке он помогал выбирать продукты и торговался. Рекомендуем всем, кто собирается в Узбекистан!'}
+  ];
+
+  // ===== ГАЛЕРЕЯ =====
+  const GALLERY=[
+    {src:IMG+'photo_9_2026-06-04_14-40-04.jpg',w:'w-l'},
+    {src:IMG+'812c7a3a-f899-4cd7-a518-c0153e70d5a8.jpg',w:'w-s'},
+    {src:IMG+'70b8d3d7-aecf-441f-baf5-76946eeded5b.webp',w:'w-m'},
+    {src:IMG+'photo_3_2026-06-04_14-40-04.jpg',w:'w-l'},
+    {src:IMG+'d5bfb65b-37ce-43f8-8927-984cca16e890.webp',w:'w-s'},
+    {src:IMG+'photo_8_2026-06-04_14-40-04.jpg',w:'w-m'},
+    {src:IMG+'19aeae09-2658-497f-92e5-444be9e6edde.webp',w:'w-l'},
+    {src:IMG+'photo_6_2026-06-04_14-40-04.jpg',w:'w-s'},
+    {src:IMG+'2bbb9b51-5511-4736-a1c1-bad85687e351.webp',w:'w-m'},
+    {src:IMG+'6ca42075-daf9-4d90-a8a1-53303daac723.jpg',w:'w-l'},
+    {src:IMG+'photo_5_2026-06-04_14-40-04.jpg',w:'w-s'},
+    {src:IMG+'af7a8c1c-c9e3-43c4-84f5-d55a41c08d79.webp',w:'w-m'}
+  ];
+
+  // ===== РЕНДЕР КАРТОЧЕК ТУРОВ =====
+  const railDay=document.getElementById('rail-day'), railMulti=document.getElementById('rail-multi');
+  function tourCard(t){
+    if(t.build){
+      return `<button class="tcard build" data-id="${t.id}">
+        <div class="ph"><span class="big-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+        <div class="body"><div class="meta">${t.meta}</div><h3>${t.title}</h3>
+          <div class="foot"><div class="price"><b>По запросу</b><small>под ваши даты</small></div>
+            <span class="more">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div>
+      </button>`;
+    }
+    const tag=t.badge?`<div class="tags"><span class="tag ${t.badgeClass}">${t.badge}</span></div>`:'';
+    return `<button class="tcard" data-id="${t.id}">
+      <div class="ph"><div class="im" style="background-image:url('${t.img}')"></div>${tag}</div>
+      <div class="body"><div class="meta">${t.meta}</div><h3>${t.title}</h3>
+        <div class="foot"><div class="price"><b>${t.price}</b><small>${t.unit}</small></div>
+          <span class="more">Подробнее <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div>
+    </button>`;
+  }
+  railDay.innerHTML=TOURS.filter(t=>t.cat==='day').map(tourCard).join('');
+  railMulti.innerHTML=TOURS.filter(t=>t.cat==='multi').map(tourCard).join('');
+
+  // ===== РЕНДЕР ОТЗЫВОВ =====
+  document.getElementById('revRail').innerHTML=REVIEWS.map(r=>`
+    <div class="rev">
+      <div class="st">★★★★★</div>
+      <div class="src">${r.src}</div>
+      <p>${r.text}</p>
+      <button class="toggle">Читать полностью</button>
+      <div class="who"><span class="av">${r.name.trim()[0]}</span><span>${r.name}<small>${r.city}</small></span></div>
+    </div>`).join('');
+  // показываем кнопку «читать» только если текст обрезан
+  document.querySelectorAll('.rev').forEach(rev=>{
+    const p=rev.querySelector('p'), tg=rev.querySelector('.toggle');
+    if(p.scrollHeight-p.clientHeight<6){tg.style.display='none';}
+    tg.addEventListener('click',()=>{const ex=rev.classList.toggle('exp');tg.textContent=ex?'Свернуть':'Читать полностью';});
+  });
+
+  // ===== РЕНДЕР ГАЛЕРЕИ =====
+  document.getElementById('galRail').innerHTML=GALLERY.map((g,i)=>`
+    <div class="gcell ${g.w}" data-i="${i}">
+      <div class="im" style="background-image:url('${g.src}')"></div>
+      <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
+    </div>`).join('');
+
+  // ===== МОДАЛКА ТУРА =====
+  const modal=document.getElementById('modal'), body=document.body;
+  const mImg=document.getElementById('mImg'),mBadge=document.getElementById('mBadge'),mMeta=document.getElementById('mMeta'),
+        mTitle=document.getElementById('mTitle'),mPrice=document.getElementById('mPrice'),mThumbs=document.getElementById('mThumbs'),
+        mDesc=document.getElementById('mDesc'),mIncl=document.getElementById('mIncl');
+  function openTour(id){
+    const t=TMAP[id]; if(!t)return;
+    const cover=t.img||t.gallery[0];
+    mImg.style.backgroundImage=`url('${cover}')`;
+    mBadge.textContent=t.badge||''; mBadge.style.display=t.badge?'':'none';
+    mMeta.textContent=t.meta; mTitle.textContent=t.title;
+    mPrice.innerHTML=t.unit?`${t.price} <span>· ${t.unit}</span>`:t.price;
+    mDesc.innerHTML=t.long;
+    mIncl.innerHTML=t.incl.map(x=>`<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 6"/></svg>${x}</li>`).join('');
+    const imgs=[cover,...t.gallery];
+    mThumbs.innerHTML=imgs.map((s,i)=>`<button class="t ${i===0?'active':''}" data-src="${s}" style="background-image:url('${s}')"></button>`).join('');
+    const fs=document.getElementById('formTour'); if(fs){[...fs.options].forEach(o=>{if(o.text.includes(t.title.split(':')[0].split(' —')[0]))fs.value=o.value;});}
+    openOverlay(modal);
+  }
+  mThumbs.addEventListener('click',e=>{const b=e.target.closest('.t');if(!b)return;
+    mImg.style.backgroundImage=`url('${b.dataset.src}')`;
+    mThumbs.querySelectorAll('.t').forEach(x=>x.classList.remove('active'));b.classList.add('active');});
+  document.querySelectorAll('.rail').forEach(r=>r.addEventListener('click',e=>{const c=e.target.closest('.tcard');if(c)openTour(c.dataset.id);}));
+  document.getElementById('mClose').addEventListener('click',()=>closeOverlay(modal));
+  modal.addEventListener('click',e=>{if(e.target===modal)closeOverlay(modal);});
+  document.getElementById('mBook').addEventListener('click',()=>closeOverlay(modal));
+
+  // ===== ЛАЙТБОКС =====
+  const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap');
+  let lbIdx=0;
+  function showLb(i){lbIdx=(i+GALLERY.length)%GALLERY.length;lbImg.src=GALLERY[lbIdx].src;lbCap.textContent=`${lbIdx+1} / ${GALLERY.length}`;}
+  document.getElementById('galRail').addEventListener('click',e=>{const c=e.target.closest('.gcell');if(!c)return;showLb(+c.dataset.i);openOverlay(lb);});
+  document.getElementById('lbClose').addEventListener('click',()=>closeOverlay(lb));
+  document.getElementById('lbPrev').addEventListener('click',()=>showLb(lbIdx-1));
+  document.getElementById('lbNext').addEventListener('click',()=>showLb(lbIdx+1));
+  lb.addEventListener('click',e=>{if(e.target===lb)closeOverlay(lb);});
+
+  // ===== ОБЩЕЕ УПРАВЛЕНИЕ ОВЕРЛЕЯМИ =====
+  function openOverlay(el){el.classList.add('open');el.setAttribute('aria-hidden','false');body.classList.add('lock');}
+  function closeOverlay(el){el.classList.remove('open');el.setAttribute('aria-hidden','true');body.classList.remove('lock');}
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){if(lb.classList.contains('open'))closeOverlay(lb);else if(modal.classList.contains('open'))closeOverlay(modal);}
+    if(lb.classList.contains('open')){if(e.key==='ArrowLeft')showLb(lbIdx-1);if(e.key==='ArrowRight')showLb(lbIdx+1);}
+  });
+
+  // ===== СТРЕЛКИ РЕЙЛОВ =====
+  document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>{
+    const r=document.getElementById(b.dataset.rail);
+    r.scrollBy({left:b.classList.contains('next')?360:-360,behavior:'smooth'});
+  }));
+
+  // ===== ПЕРЕТАСКИВАНИЕ МЫШЬЮ (горизонтальный скролл на десктопе) =====
+  function dragScroll(el){
+    if(!el)return;
+    var down=false,startX=0,startL=0,dist=0;
+    el.addEventListener('mousedown',function(e){
+      if(e.button!==0)return;
+      down=true;dist=0;startX=e.pageX;startL=el.scrollLeft;el.classList.add('grabbing');
+    });
+    window.addEventListener('mousemove',function(e){
+      if(!down)return;
+      var dx=e.pageX-startX;dist=Math.abs(dx);
+      if(dist>3){el.scrollLeft=startL-dx;e.preventDefault();}
+    });
+    window.addEventListener('mouseup',function(){
+      if(!down)return;down=false;el.classList.remove('grabbing');
+      if(dist>8){el.__drag=true;setTimeout(function(){el.__drag=false;},40);}
+    });
+    el.addEventListener('click',function(e){ if(el.__drag){e.stopPropagation();e.preventDefault();} },true);
+    el.addEventListener('dragstart',function(e){e.preventDefault();});
+  }
+  ['rail-day','rail-multi','galRail','revRail','mThumbs'].forEach(id=>dragScroll(document.getElementById(id)));
+
+  // ===== СВАЙП В ЛАЙТБОКСЕ (мобильные) =====
+  let lbTouchX=0;
+  lb.addEventListener('touchstart',function(e){lbTouchX=e.changedTouches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){
+    const dx=e.changedTouches[0].clientX-lbTouchX;
+    if(Math.abs(dx)>40)showLb(lbIdx+(dx<0?1:-1));
+  },{passive:true});
+
+  // ===== ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ =====
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.08)+'s';io.observe(el);});
+
+  // ===== ШАПКА + ПОЛОСА ПРОГРЕССА =====
+  const hdr=document.getElementById('hdr'),prog=document.querySelector('.progress i');
+  const onScroll=()=>{hdr.classList.toggle('scrolled',window.scrollY>40);
+    const d=document.documentElement,max=d.scrollHeight-d.clientHeight;
+    prog.style.width=(max>0?(d.scrollTop/max)*100:0)+'%';};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // ===== СЧЁТЧИКИ =====
+  const animCount=el=>{const to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0'),suf=el.dataset.suf||'',dur=1500,t0=performance.now();
+    const tick=t=>{const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);let v=(to*e).toFixed(dec);if(dec>0)v=v.replace('.',',');
+      el.textContent=v+suf;if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);};
+  const co=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animCount(e.target);co.unobserve(e.target);}}),{threshold:.4});
+  document.querySelectorAll('.count').forEach(el=>co.observe(el));
+
+  // ===== МОБИЛЬНОЕ МЕНЮ =====
+  const burger=document.getElementById('burger'),mob=document.getElementById('mobile');
+  burger.addEventListener('click',()=>mob.classList.toggle('open'));
+  mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
+</script>
+
+</body>
+</html>
