@@ -636,9 +636,9 @@
       </div>
     </div>
 
-    <!-- Форма отправляет заявку вам на e-mail через Formspree.
-         Зарегистрируйтесь на formspree.io и вставьте свой ID вместо YOUR_ID -->
-    <form class="form reveal" action="https://formspree.io/f/YOUR_ID" method="POST">
+    <!-- Заявка уходит вам в WhatsApp: при отправке открывается чат с уже
+         заполненным сообщением (имя, телефон, экскурсия, пожелания). -->
+    <form class="form reveal" id="leadForm" data-wa="998997709949">
       <h3>Оставить заявку</h3>
       <label>Ваше имя</label>
       <input type="text" name="name" placeholder="Как к вам обращаться?" required>
@@ -657,7 +657,7 @@
       </select>
       <label>Дата и пожелания</label>
       <textarea name="message" rows="3" placeholder="Когда планируете, сколько человек, особые пожелания"></textarea>
-      <button type="submit" class="btn btn-brick">Отправить заявку <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <button type="submit" class="btn btn-brick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg> Отправить в WhatsApp</button>
     </form>
   </div>
 </section>
@@ -959,6 +959,25 @@
   const burger=document.getElementById('burger'),mob=document.getElementById('mobile');
   burger.addEventListener('click',()=>mob.classList.toggle('open'));
   mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
+
+  // ===== ЗАЯВКА → WHATSAPP =====
+  const leadForm=document.getElementById('leadForm');
+  if(leadForm){
+    leadForm.addEventListener('submit',e=>{
+      e.preventDefault();
+      const f=leadForm.elements;
+      const name=(f['name'].value||'').trim();
+      const phone=(f['phone'].value||'').trim();
+      const tour=f['tour'].value;
+      const msg=(f['message'].value||'').trim();
+      const text='Здравствуйте! Хочу оставить заявку на экскурсию.\n'+
+        '👤 Имя: '+name+'\n'+
+        '📞 Телефон для связи: '+phone+'\n'+
+        '🗺️ Экскурсия: '+tour+
+        (msg?('\n📝 Пожелания: '+msg):'');
+      window.open('https://wa.me/'+leadForm.dataset.wa+'?text='+encodeURIComponent(text),'_blank');
+    });
+  }
 </script>
 
 </body>
