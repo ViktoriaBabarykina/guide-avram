@@ -199,7 +199,9 @@
   .more svg{width:16px;height:16px;transition:transform .3s}
   .tcard:hover .more svg{transform:translateX(4px)}
   /* карточка-конструктор (без фото) */
-  .tcard.build{background:linear-gradient(150deg,#16557a,#0c2b3e)}
+  .tcard.build{background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='%23d9a743' stroke-opacity='0.16' stroke-width='1.1'%3E%3Cpath d='M32 1L63 32 32 63 1 32Z'/%3E%3Cpath d='M32 15L49 32 32 49 15 32Z'/%3E%3Ccircle cx='32' cy='32' r='4.5'/%3E%3C/g%3E%3C/svg%3E") center/64px,
+    linear-gradient(150deg,#16557a,#0c2b3e)}
   .tcard.build .build-ic{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:20px;
     background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;z-index:2}
   .tcard.build .build-ic svg{width:34px;height:34px;color:var(--gold)}
@@ -826,7 +828,6 @@
   function tourCard(t){
     if(t.build){
       return `<button class="tcard build" data-id="${t.id}">
-        <span class="build-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
         <div class="grad"></div>
         <div class="info"><div class="meta">${t.meta}</div><h3>${t.title}</h3>
           <div class="foot"><div class="price"><b>По запросу</b><small>под ваши даты</small></div>
