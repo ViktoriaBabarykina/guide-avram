@@ -204,7 +204,7 @@
         incl: ['Transfer from Tashkent and back', 'Guide throughout the day', 'Amirsoy cable car ride', 'Stops at the best viewpoints'] } },
 
     { id: 'transfer', cat: 'day', badgeClass: '', img: IMG + 'transfer/3bf1506f-9d0a-4a8f-84d0-5b83602ef17b.webp',
-      gallery: [IMG + 'transfer/17de90cf-b4d5-476a-bfd2-be7b3f39fa2e.webp', IMG + 'transfer/cf3aa0bb-6fd7-473e-b6a4-0e2b3d74c99e.webp', IMG + 'transfer/e0e4294c-d512-4c57-b2a7-952bcd07e653.webp'],
+      gallery: [IMG + 'transfer/car3.jpg', IMG + 'transfer/car2.jpg', IMG + 'transfer/car4.jpg'],
       ru: { title: 'Трансфер из Самарканда в Шахрисабз — и обратно', meta: 'Туда и обратно · авто · без гида', price: 'от $105', unit: 'за группу', badge: 'Трансфер',
         long: `<p><b>Обратите внимание:</b> это не экскурсия, а услуга перевозки — участие гида не предполагается.</p><p>Автомобиль подадим к вашему отелю или другому удобному месту. В Шахрисабзе у вас будет достаточно времени, чтобы самостоятельно погулять по историческому центру: увидеть архитектуру эпохи Темуридов, пройтись по паркам и почувствовать атмосферу древнего города. После прогулки водитель встретит вас в назначенное время и отвезёт обратно в Самарканд.</p><p>Трансфер проходит на комфортабельном автомобиле Chevrolet или Hyundai (детских кресел нет). Дорога в одну сторону занимает около 2 часов; в пути возможны остановки для отдыха, фото и обеда — по вашему желанию.</p>`,
         incl: ['Подача авто к вашему отелю', 'Дорога туда и обратно', 'Комфортный автомобиль (Chevrolet/Hyundai)', 'Свободное время в Шахрисабзе'] },
@@ -288,18 +288,29 @@
 
   // ===== ГАЛЕРЕЯ =====
   window.GALLERY = [
-    { src: IMG + 'photo_9_2026-06-04_14-40-04.jpg', w: 'w-l' },
+    // холодные сине-серые тона, от тёмного к светлому
     { src: IMG + '812c7a3a-f899-4cd7-a518-c0153e70d5a8.jpg', w: 'w-s' },
-    { src: IMG + '70b8d3d7-aecf-441f-baf5-76946eeded5b.webp', w: 'w-m' },
-    { src: IMG + 'photo_3_2026-06-04_14-40-04.jpg', w: 'w-l' },
-    { src: IMG + 'd5bfb65b-37ce-43f8-8927-984cca16e890.webp', w: 'w-s' },
     { src: IMG + 'photo_8_2026-06-04_14-40-04.jpg', w: 'w-m' },
-    { src: IMG + '19aeae09-2658-497f-92e5-444be9e6edde.webp', w: 'w-l' },
+    { src: IMG + 'tourists/171d7df1-4691-4449-8a29-e3dc12118d50.webp', w: 'w-s' },
+    { src: IMG + 'photo_9_2026-06-04_14-40-04.webp', w: 'w-l' },
+    { src: IMG + 'tourists/118ca274-1a40-4d3d-90ab-ca7061be86b7.webp', w: 'w-s' },
+    { src: IMG + 'tourists/a217af77-9d95-41c8-95ca-d5b9a662e8d8.webp', w: 'w-m' },
+    { src: IMG + 'tourists/b867bfbd-1d38-418c-a596-02bdd7f61def.webp', w: 'w-s' },
+    { src: IMG + 'tourists/7ef8b867-4489-4eb9-aa38-cc95c04ce356.webp', w: 'w-s' },
     { src: IMG + 'photo_6_2026-06-04_14-40-04.jpg', w: 'w-s' },
     { src: IMG + '2bbb9b51-5511-4736-a1c1-bad85687e351.webp', w: 'w-m' },
     { src: IMG + '6ca42075-daf9-4d90-a8a1-53303daac723.jpg', w: 'w-l' },
+    { src: IMG + 'tourists/photo_2026-06-05_23-20-02.jpg', w: 'w-s' },
+    { src: IMG + 'd5bfb65b-37ce-43f8-8927-984cca16e890.webp', w: 'w-s' },
+    // тёплые золотисто-земляные тона, от светлого к тёмному
+    { src: IMG + 'tourists/0daa5087-2649-4ecf-9b59-3444a34cb753.webp', w: 'w-s' },
+    { src: IMG + 'tourists/2407b8b1-a65f-4aa0-9b9a-df7081ab4ec5.webp', w: 'w-s' },
+    { src: IMG + 'tourists/7066de9d-3f0c-4a3d-a945-f6d0b4bbd816.webp', w: 'w-s' },
+    { src: IMG + 'af7a8c1c-c9e3-43c4-84f5-d55a41c08d79.webp', w: 'w-m' },
     { src: IMG + 'photo_5_2026-06-04_14-40-04.jpg', w: 'w-s' },
-    { src: IMG + 'af7a8c1c-c9e3-43c4-84f5-d55a41c08d79.webp', w: 'w-m' }
+    { src: IMG + '70b8d3d7-aecf-441f-baf5-76946eeded5b.webp', w: 'w-m' },
+    // глубокий бордовый — финальный тёплый акцент
+    { src: IMG + 'photo_3_2026-06-04_14-40-04.jpg', w: 'w-l' }
   ];
 
   // ===== ПРИМЕНЕНИЕ ПЕРЕВОДА К СТАТИКЕ =====
