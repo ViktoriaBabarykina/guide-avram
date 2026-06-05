@@ -81,14 +81,23 @@
     color:#fff;align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:4px}
   header.scrolled .burger{border-color:var(--line);background:var(--paper);color:var(--ink)}
   .burger i{width:18px;height:2px;background:currentColor;display:block;border-radius:2px}
-  /* переключатель языка RU/EN */
-  .lang-switch{display:flex;gap:1px;border:1.5px solid rgba(255,255,255,.34);border-radius:999px;padding:2px;flex:none}
-  header.scrolled .lang-switch{border-color:var(--line)}
-  .lang-switch button{border:0;background:transparent;color:#fff;font-family:inherit;font-weight:800;font-size:11.5px;letter-spacing:.04em;
-    padding:5px 9px;border-radius:999px;cursor:pointer;line-height:1;transition:.2s}
-  header.scrolled .lang-switch button{color:var(--ink)}
-  .lang-switch button:hover{opacity:.75}
-  .lang-switch button.active{background:var(--brick);color:#fff;opacity:1}
+  /* переключатель языка RU/EN — выпадающий список */
+  .lang-switch{position:relative;flex:none}
+  .lang-current{display:flex;align-items:center;gap:6px;border:1.5px solid rgba(255,255,255,.34);background:transparent;color:#fff;
+    font-family:inherit;font-weight:800;font-size:12px;letter-spacing:.04em;padding:7px 11px;border-radius:999px;cursor:pointer;line-height:1;transition:.2s}
+  header.scrolled .lang-current{border-color:var(--line);color:var(--ink)}
+  .lang-current:hover{border-color:#fff}
+  header.scrolled .lang-current:hover{border-color:var(--ink)}
+  .lang-current svg{width:15px;height:15px;flex:none}
+  .lang-current .chev{width:13px;height:13px;transition:transform .25s}
+  .lang-switch.open .lang-current .chev{transform:rotate(180deg)}
+  .lang-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:148px;background:var(--paper);border:1px solid var(--line);
+    border-radius:14px;box-shadow:var(--shadow);padding:6px;display:none;flex-direction:column;gap:2px;z-index:100}
+  .lang-switch.open .lang-menu{display:flex}
+  .lang-menu button{border:0;background:transparent;color:var(--ink);font-family:inherit;font-weight:600;font-size:14.5px;text-align:left;
+    padding:10px 13px;border-radius:9px;cursor:pointer;transition:.15s}
+  .lang-menu button:hover{background:var(--paper-2)}
+  .lang-menu button.active{background:rgba(212,102,60,.18);color:var(--brick);font-weight:700}
   @media(max-width:880px){
     .menu .lnk{display:none}
     .menu .btn-brick{display:none}
