@@ -11,6 +11,8 @@
   const I18N = {
     ru: {
       docTitle: 'Экскурсии и туры по Узбекистану · Самарканд, Бухара, Хива',
+      metaDesc: 'Авторские экскурсии и туры по Узбекистану с местными гидами. Самарканд, Бухара, Хива, Ташкент, Шахрисабз и горные озёра. Рейтинг 4,99 — более 3000 довольных гостей.',
+      ogTitle: 'Узбекистан с местными гидами · авторские экскурсии и туры',
       brandName: 'Аврам', brandSub: 'Ваш гид по Узбекистану',
       navTours: 'Экскурсии', navAbout: 'Обо мне', navReviews: 'Отзывы', navFaq: 'Вопросы',
       navBook: 'Забронировать', navBookFull: 'Забронировать экскурсию',
@@ -62,6 +64,7 @@
       formPhone: 'Телефон', formPhonePh: '+998 ...', formTourQ: 'Какая экскурсия интересует?',
       formMsg: 'Дата и пожелания', formMsgPh: 'Когда планируете, сколько человек, особые пожелания',
       formSubmit: 'Отправить в WhatsApp',
+      formSent: 'Спасибо! Мы открыли WhatsApp с вашей заявкой — отправьте сообщение, чтобы мы его получили. Если окно не появилось, напишите нам в <a href="https://t.me/Guide_Avram" target="_blank" rel="noopener">Telegram</a>.',
       opt_haftkul: 'Хафткул: семь озёр', opt_bukhara: 'Пешая экскурсия по Бухаре',
       opt_samarkand: 'Самарканд за один день (+ плов)', opt_khiva: 'Хива — Ичан-Кала',
       opt_shahrisabz: 'Из Самарканда в Шахрисабз', opt_chimgan: 'Из Ташкента — туда, куда вы не ездили',
@@ -76,6 +79,8 @@
     },
     en: {
       docTitle: 'Tours & excursions in Uzbekistan · Samarkand, Bukhara, Khiva',
+      metaDesc: 'Private tours & excursions across Uzbekistan with local guides. Samarkand, Bukhara, Khiva, Tashkent, Shahrisabz and the mountain lakes. Rated 4.99 — 3000+ happy guests.',
+      ogTitle: 'Uzbekistan with local guides · curated tours & excursions',
       brandName: 'Avram', brandSub: 'Your guide to Uzbekistan',
       navTours: 'Tours', navAbout: 'About', navReviews: 'Reviews', navFaq: 'FAQ',
       navBook: 'Book now', navBookFull: 'Book a tour',
@@ -127,6 +132,7 @@
       formPhone: 'Phone', formPhonePh: '+998 ...', formTourQ: 'Which tour are you interested in?',
       formMsg: 'Date & notes', formMsgPh: 'When you plan to go, how many people, any special wishes',
       formSubmit: 'Send via WhatsApp',
+      formSent: 'Thank you! We have opened WhatsApp with your request — please send the message so we receive it. If the window did not open, message us on <a href="https://t.me/Guide_Avram" target="_blank" rel="noopener">Telegram</a>.',
       opt_haftkul: 'Haftkul: seven lakes', opt_bukhara: 'Walking tour of Bukhara',
       opt_samarkand: 'Samarkand in one day (+ plov)', opt_khiva: 'Khiva — Ichan-Kala',
       opt_shahrisabz: 'From Samarkand to Shahrisabz', opt_chimgan: "From Tashkent — to places you've never been",
@@ -328,6 +334,21 @@
       const v = T(el.getAttribute('data-i18n-ph')); if (v != null) el.setAttribute('placeholder', v);
     });
     const tt = T('docTitle'); if (tt) document.title = tt;
+    // локализованные meta-теги (описание, og/twitter, locale)
+    function setMeta(sel, val) { const el = document.querySelector(sel); if (el && val != null) el.setAttribute('content', val); }
+    const dd = T('metaDesc');
+    if (dd) {
+      setMeta('meta[name="description"]', dd);
+      setMeta('meta[property="og:description"]', dd);
+      setMeta('meta[name="twitter:description"]', dd);
+    }
+    const ot = T('ogTitle');
+    if (ot) {
+      setMeta('meta[property="og:title"]', ot);
+      setMeta('meta[name="twitter:title"]', ot);
+    }
+    setMeta('meta[property="og:locale"]', window.LANG === 'en' ? 'en_US' : 'ru_RU');
+    setMeta('meta[property="og:locale:alternate"]', window.LANG === 'en' ? 'ru_RU' : 'en_US');
   }
   window.applyStaticI18n = applyStaticI18n;
 

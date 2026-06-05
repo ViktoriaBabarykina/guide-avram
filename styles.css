@@ -341,6 +341,9 @@
   .form select option{background:#112a3a;color:#e9f1f6}
   .form input:focus,.form select:focus,.form textarea:focus{outline:0;border-color:var(--brick);box-shadow:0 0 0 3px rgba(177,78,46,.15)}
   .form .btn{width:100%}
+  .form-status{display:none;margin:16px 0 0;padding:13px 15px;border-radius:12px;background:rgba(46,125,90,.12);
+    border:1px solid rgba(46,125,90,.35);color:#1f6b4a;font-size:14px;line-height:1.5}
+  .form-status a{color:var(--brick);font-weight:700;text-decoration:underline}
 
   /* ===== ПОДВАЛ ===== */
   footer{background:#081722;color:#8499a8;padding:54px 0 28px;font-size:14.5px}

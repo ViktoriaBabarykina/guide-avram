@@ -172,6 +172,7 @@
   // ===== ЗАЯВКА → WHATSAPP =====
   const leadForm = document.getElementById('leadForm');
   if (leadForm) {
+    let statusEl = null;
     leadForm.addEventListener('submit', e => {
       e.preventDefault();
       const f = leadForm.elements;
@@ -184,7 +185,17 @@
         '📞 ' + T('msgPhone') + ': ' + phone + '\n' +
         '🗺️ ' + T('msgTour') + ': ' + tour +
         (msg ? ('\n📝 ' + T('msgNotes') + ': ' + msg) : '');
-      if (window.ym) ym(109685826, 'reachGoal', 'lead');
-      window.open('https://wa.me/' + leadForm.dataset.wa + '?text=' + encodeURIComponent(text), '_blank');
+      const url = 'https://wa.me/' + leadForm.dataset.wa + '?text=' + encodeURIComponent(text);
+      const win = window.open(url, '_blank', 'noopener');
+      // если попап заблокирован — переходим в том же окне, чтобы заявка не потерялась
+      if (!win || win.closed || typeof win.closed === 'undefined') { location.href = url; return; }
+      if (!statusEl) {
+        statusEl = document.createElement('p');
+        statusEl.className = 'form-status';
+        statusEl.setAttribute('role', 'status');
+        leadForm.appendChild(statusEl);
+      }
+      statusEl.innerHTML = T('formSent');
+      statusEl.style.display = 'block';
     });
   }

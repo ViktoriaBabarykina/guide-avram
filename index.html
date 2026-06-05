@@ -76,8 +76,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "5",
+    "ratingValue": "4.99",
     "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "3000",
     "reviewCount": "6"
   },
   "review": [
@@ -336,9 +338,9 @@
     <form class="form reveal" id="leadForm" data-wa="998997709949">
       <h3 data-i18n="formTitle">Оставить заявку</h3>
       <label data-i18n="formName">Ваше имя</label>
-      <input type="text" name="name" placeholder="Как к вам обращаться?" data-i18n-ph="formNamePh" required>
+      <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться?" data-i18n-ph="formNamePh" required>
       <label data-i18n="formPhone">Телефон</label>
-      <input type="text" name="phone" placeholder="+998 ..." data-i18n-ph="formPhonePh" required>
+      <input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="+998 ..." data-i18n-ph="formPhonePh" required>
       <label data-i18n="formTourQ">Какая экскурсия интересует?</label>
       <select name="tour" id="formTour">
         <option data-i18n="opt_haftkul">Хафткул: семь озёр</option>
