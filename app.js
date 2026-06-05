@@ -180,7 +180,7 @@
         '📞 ' + T('msgPhone') + ': ' + phone + '\n' +
         '🗺️ ' + T('msgTour') + ': ' + tour +
         (msg ? ('\n📝 ' + T('msgNotes') + ': ' + msg) : '');
-      if (window.ym) ym(109656305, 'reachGoal', 'lead');
+      if (window.ym) ym(109685826, 'reachGoal', 'lead');
       window.open('https://wa.me/' + leadForm.dataset.wa + '?text=' + encodeURIComponent(text), '_blank');
     });
   }
