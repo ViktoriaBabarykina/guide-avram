@@ -114,7 +114,7 @@
 
   /* ===== HERO ===== */
   .hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:120px 0 70px}
-  .hero .bg{position:absolute;inset:0;z-index:-2;background:url('img/hero-tile.jpg') center/cover;
+  .hero .bg{position:absolute;inset:0;z-index:-2;background:url('img/hero-tile.webp') center/cover;
     transform-origin:60% 40%;animation:kenburns 26s ease-in-out infinite alternate;will-change:transform}
   @keyframes kenburns{0%{transform:scale(1.05) translate(0,0)}100%{transform:scale(1.16) translate(-2.5%,-1.5%)}}
   .hero::after{content:"";position:absolute;inset:0;z-index:-1;
@@ -269,7 +269,7 @@
   .gcell{position:relative;flex:0 0 auto;height:340px;border-radius:18px;overflow:hidden;cursor:pointer;scroll-snap-align:center;
     box-shadow:var(--shadow-soft)}
   .gcell.w-s{width:260px}.gcell.w-m{width:330px}.gcell.w-l{width:440px}
-  .gcell .im{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .gcell .im{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
   .gcell:hover .im{transform:scale(1.08)}
   .gcell::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,22,32,.4),transparent 45%);opacity:0;transition:.3s}
   .gcell:hover::after{opacity:1}
@@ -319,7 +319,7 @@
 
   /* ===== CTA + ФОРМА ===== */
   .cta{position:relative;color:#fff;text-align:center;overflow:hidden;padding:clamp(108px,13vw,134px) 0}
-  .cta .bg{position:absolute;inset:0;z-index:-2;background:url('img/photo_10_2026-06-04_14-40-04.jpg') center/cover}
+  .cta .bg{position:absolute;inset:0;z-index:-2;background:url('img/photo_10_2026-06-04_14-40-04.webp') center/cover}
   .cta::after{content:"";position:absolute;inset:0;z-index:-1;
     background:linear-gradient(180deg,var(--sand),rgba(10,26,36,0) 110px) top/100% 110px no-repeat,
               linear-gradient(0deg,#081722,rgba(8,23,34,0) 150px) bottom/100% 150px no-repeat,

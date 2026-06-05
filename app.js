@@ -50,15 +50,19 @@
   }
   renderReviews();
 
-  // перерисовка при смене языка
-  if (window.onLang) { window.onLang(renderTours); window.onLang(renderReviews); }
-
   // ===== РЕНДЕР ГАЛЕРЕИ =====
-  document.getElementById('galRail').innerHTML = GALLERY.map((g, i) => `
+  const galRailEl = document.getElementById('galRail');
+  function renderGallery() {
+    galRailEl.innerHTML = GALLERY.map((g, i) => `
     <div class="gcell ${g.w}" data-i="${i}">
-      <div class="im" style="background-image:url('${g.src}')"></div>
+      <img class="im" src="${g.src}" alt="${T('galAlt')} — ${i + 1}" loading="lazy" decoding="async" draggable="false">
       <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
     </div>`).join('');
+  }
+  renderGallery();
+
+  // перерисовка при смене языка
+  if (window.onLang) { window.onLang(renderTours); window.onLang(renderReviews); window.onLang(renderGallery); }
 
   // ===== МОДАЛКА ТУРА =====
   const modal = document.getElementById('modal'), body = document.body;

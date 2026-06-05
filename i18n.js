@@ -45,6 +45,7 @@
       aboutBtn: 'Забронировать экскурсию',
       galleryKicker: 'Галерея', galleryH2: 'Узбекистан крупным планом',
       galHint: 'Листайте вбок и нажмите на фото, чтобы открыть',
+      galAlt: 'Фото из путешествия по Узбекистану с гидом',
       reviewsKicker: 'Отзывы', reviewsH2: 'Что говорят гости',
       reviewsLead: 'Все отзывы — на 5 звёзд. Листайте вбок, чтобы прочитать.',
       reviewMore: 'Читать полностью', reviewLess: 'Свернуть',
@@ -109,6 +110,7 @@
       aboutBtn: 'Book a tour',
       galleryKicker: 'Gallery', galleryH2: 'Uzbekistan up close',
       galHint: 'Swipe sideways and tap a photo to open',
+      galAlt: 'Photo from a guided trip around Uzbekistan',
       reviewsKicker: 'Reviews', reviewsH2: 'What guests say',
       reviewsLead: 'Every review is 5 stars. Swipe sideways to read them.',
       reviewMore: 'Read more', reviewLess: 'Collapse',
@@ -149,8 +151,8 @@
 
   // ===== ДАННЫЕ ТУРОВ (двуязычные) =====
   window.TOURS = [
-    { id: 'haftkul', cat: 'day', badgeClass: 'hit', img: IMG + '7lakes/08720ccc-275b-46ee-a93c-3a39278c4365.jpg',
-      gallery: [IMG + '7lakes/d5bfb65b-37ce-43f8-8927-984cca16e890.webp', IMG + '7lakes/0ea78151-bbc0-4282-9314-d27faed68328.jpg', IMG + '7lakes/31af5ad2-00d6-4b57-b3dd-a5bf244a5515.webp', IMG + '7lakes/37343933-aa99-489f-8967-ce3b0745a63d.webp', IMG + '7lakes/44f44d04-76b7-4f50-a070-5851c64e2826.webp'],
+    { id: 'haftkul', cat: 'day', badgeClass: 'hit', img: IMG + '7lakes/08720ccc-275b-46ee-a93c-3a39278c4365.webp',
+      gallery: [IMG + '7lakes/d5bfb65b-37ce-43f8-8927-984cca16e890.webp', IMG + '7lakes/0ea78151-bbc0-4282-9314-d27faed68328.webp', IMG + '7lakes/31af5ad2-00d6-4b57-b3dd-a5bf244a5515.webp', IMG + '7lakes/37343933-aa99-489f-8967-ce3b0745a63d.webp', IMG + '7lakes/44f44d04-76b7-4f50-a070-5851c64e2826.webp'],
       ru: { title: 'Хафткул: семь удивительных озёр', meta: 'Целый день · из Самарканда · авто 4×4', price: 'от $277', unit: 'за группу', badge: '★ Хит',
         long: `<p>Каждое из семи озёр имеет своё название. Знакомство начнём с озера Нежигон, затем посетим Соя, Гушор, Нофин, Хурдак, крупнейшее из всех — Маргузор, и последнее, названное «тысячей родников», — Хазорчашма. Почти все озёра относятся к завальному типу. Что это такое и какое из семи не является завальным — расскажу в поездке. А ещё покажу древние петроглифы на берегу: они говорят о почтенном возрасте водоёмов.</p><p>Озёра располагаются в Фанских горах, и перепад высот между ними существенный — 760 м: самое нижнее на высоте 1640 м над уровнем моря, последнее — на отметке 2400 м. Все семь посетим на комфортабельном внедорожнике: прокатимся по серпантину, полюбуемся лучшими видами и устроим лёгкий пикник в живописном месте.</p>`,
         incl: ['Полноприводный внедорожник с водителем', 'Сопровождение гида весь день', 'Все семь озёр за поездку', 'Лёгкий пикник на берегу', 'Помощь на границе'] },
@@ -158,8 +160,8 @@
         long: `<p>Each of the seven lakes has its own name. We start with Lake Nezhigon, then visit Soya, Gushor, Nofin, Khurdak, the largest one — Marguzor, and the last, called the “thousand springs” — Hazorchashma. Almost all the lakes are of landslide-dammed origin. What that means — and which of the seven is the exception — I'll tell you on the way. I'll also show ancient petroglyphs on the shore that hint at the venerable age of these waters.</p><p>The lakes lie in the Fann Mountains, and the elevation change between them is significant — 760 m: the lowest sits at 1640 m above sea level, the last at 2400 m. We'll visit all seven in a comfortable off-road vehicle: ride the winding roads, enjoy the best views and have a light picnic in a scenic spot.</p>`,
         incl: ['4×4 off-road vehicle with driver', 'Guide throughout the day', 'All seven lakes in one trip', 'Light picnic by the lake', 'Help at the border'] } },
 
-    { id: 'bukhara', cat: 'day', badgeClass: '', img: IMG + 'bukh/IMG_3076.jpg',
-      gallery: [IMG + 'bukh/IMG_3084.jpg', IMG + 'bukh/IMG_3091.jpg', IMG + 'bukh/IMG_3112.jpg', IMG + 'bukh/IMG_3114.jpg', IMG + 'bukh/IMG_3126.jpg'],
+    { id: 'bukhara', cat: 'day', badgeClass: '', img: IMG + 'bukh/IMG_3076.webp',
+      gallery: [IMG + 'bukh/IMG_3084.webp', IMG + 'bukh/IMG_3091.webp', IMG + 'bukh/IMG_3112.webp', IMG + 'bukh/IMG_3114.webp', IMG + 'bukh/IMG_3126.webp'],
       ru: { title: 'Пешая экскурсия по Бухаре — путешествие сквозь века', meta: '5 часов · Бухара · пешая', price: 'от $90', unit: 'за экскурсию · 1–4 чел', badge: 'Бухара',
         long: `<p>Откройте для себя древнюю Бухару — город караванов, величественных медресе и легенд Великого шёлкового пути. Во время прогулки по историческому центру вы увидите самые знаменитые памятники архитектуры, узнаете истории бухарских эмиров и почувствуете неповторимую атмосферу одного из старейших городов мира.</p><h4>Точки маршрута</h4><ul><li>Ляби-Хауз</li><li>Медресе Нодир Диван-Беги</li><li>Торговые купола Токи</li><li>Пои-Калян</li><li>Крепость Арк</li><li>Боло-Хауз</li><li>Мавзолей Саманидов</li><li>Чашма Айюб</li></ul><p>Уютные улочки, восточный колорит, впечатляющие памятники и увлекательные рассказы сделают эту прогулку незабываемой.</p>`,
         incl: ['Сопровождение гида весь маршрут', 'Прогулка по историческому центру', 'Истории эмиров и легенды города', 'Помощь с фотографиями'] },
@@ -167,8 +169,8 @@
         long: `<p>Discover ancient Bukhara — a city of caravans, majestic madrasahs and legends of the Great Silk Road. Walking through the historic centre you'll see its most famous architectural monuments, hear the stories of the Bukharan emirs and feel the unique atmosphere of one of the world's oldest cities.</p><h4>Route stops</h4><ul><li>Lyabi-Hauz</li><li>Nadir Divan-Begi Madrasah</li><li>Toqi trading domes</li><li>Poi-Kalyan</li><li>The Ark Fortress</li><li>Bolo-Hauz</li><li>Samanid Mausoleum</li><li>Chashma-Ayyub</li></ul><p>Cosy lanes, oriental colour, striking monuments and captivating stories will make this walk unforgettable.</p>`,
         incl: ['Guide for the whole route', 'Walk through the historic centre', 'Stories of emirs and city legends', 'Help with photos'] } },
 
-    { id: 'samarkand', cat: 'day', badgeClass: 'star', img: IMG + 'sam/sam1.jpg',
-      gallery: [IMG + 'sam/sam2.jpg', IMG + 'sam/sam3.jpg', IMG + 'sam/sam4.jpg', IMG + 'sam/sam5.jpg', IMG + 'sam/sam6.jpg', IMG + 'sam/sam7.jpg'],
+    { id: 'samarkand', cat: 'day', badgeClass: 'star', img: IMG + 'sam/sam1.webp',
+      gallery: [IMG + 'sam/sam2.webp', IMG + 'sam/sam3.webp', IMG + 'sam/sam4.webp', IMG + 'sam/sam5.webp', IMG + 'sam/sam6.webp', IMG + 'sam/sam7.webp'],
       ru: { title: 'Самарканд: всё самое главное за один день + дегустация плова', meta: '6 часов · Самарканд · гид + транспорт', price: 'от $140', unit: 'за экскурсию · 1–4 чел', badge: 'С дегустацией',
         long: `<p>Приглашаю вас в путешествие по жемчужине Востока — легендарному Самарканду! Мы посетим самые известные достопримечательности города: площадь Регистан, мавзолей Гур-Эмир, грандиозную мечеть Биби-Ханум, уникальный комплекс Шахи-Зинда и колоритный Сиабский базар.</p><p>По пути вы узнаете историю Великого шёлкового пути, эпохи Амира Тимура и древнего Самарканда, а также познакомитесь с традициями местных ремесленников на шёлково-ковровой фабрике.</p><p>И, конечно, вас ждёт дегустация настоящего самаркандского плова — главного гастрономического символа Узбекистана.</p>`,
         incl: ['Услуги гида и транспорт', 'Главные памятники Самарканда', 'Шёлково-ковровая фабрика', 'Дегустация самаркандского плова'] },
@@ -176,8 +178,8 @@
         long: `<p>I invite you on a journey to the pearl of the East — legendary Samarkand! We'll visit the city's most famous sights: Registan Square, the Gur-Emir Mausoleum, the grand Bibi-Khanym Mosque, the unique Shah-i-Zinda complex and the colourful Siab Bazaar.</p><p>Along the way you'll learn the history of the Great Silk Road, the era of Amir Timur and ancient Samarkand, and meet local artisans at a silk-carpet workshop.</p><p>And, of course, a tasting of real Samarkand plov awaits you — the main gastronomic symbol of Uzbekistan.</p>`,
         incl: ['Guide services and transport', "Samarkand's main monuments", 'Silk-carpet workshop', 'Samarkand plov tasting'] } },
 
-    { id: 'khiva', cat: 'day', badgeClass: '', img: IMG + 'hiva/hiva1.jpg',
-      gallery: [IMG + 'hiva/hiva2.jpg', IMG + 'hiva/hiva3.jpg', IMG + 'hiva/hiva4.jpg', IMG + 'hiva/hiva5.jpg', IMG + 'hiva/hiva6.jpg', IMG + 'hiva/hiva7.jpg'],
+    { id: 'khiva', cat: 'day', badgeClass: '', img: IMG + 'hiva/hiva1.webp',
+      gallery: [IMG + 'hiva/hiva2.webp', IMG + 'hiva/hiva3.webp', IMG + 'hiva/hiva4.webp', IMG + 'hiva/hiva5.webp', IMG + 'hiva/hiva6.webp', IMG + 'hiva/hiva7.webp'],
       ru: { title: 'Хива — путешествие в город из восточной сказки', meta: '4–4,5 часа · Хива · пешая', price: 'от $90', unit: 'за экскурсию · 1–4 чел', badge: 'ЮНЕСКО',
         long: `<p>Приглашаю вас на прогулку по древней Хиве — одному из самых хорошо сохранившихся городов Великого шёлкового пути. Мы исследуем легендарную Ичан-Калу, включённую в список Всемирного наследия ЮНЕСКО: дворцы хивинских ханов, старинные медресе, величественные минареты и мечети.</p><h4>В программе</h4><ul><li>Куня-Арк</li><li>Таш-Хаули</li><li>Джума-мечеть</li><li>Мавзолей Пахлавана Махмуда</li><li>Минарет Кальта-Минор</li><li>Бастион Ак-Шейх-Бобо — панорама на весь город</li></ul><p>Вас ждут захватывающие истории о ханах, караванах Великого шёлкового пути и тайнах древней Хивы, сохранившей атмосферу настоящего Востока.</p>`,
         incl: ['Сопровождение гида весь маршрут', 'Прогулка по Ичан-Кале', 'Дворцы, медресе, минареты и мечети', 'Истории о ханах и Шёлковом пути'] },
@@ -185,8 +187,8 @@
         long: `<p>I invite you for a walk through ancient Khiva — one of the best-preserved cities of the Great Silk Road. We'll explore the legendary Ichan-Kala, a UNESCO World Heritage Site: the palaces of the Khiva khans, old madrasahs, majestic minarets and mosques.</p><h4>On the programme</h4><ul><li>Kunya-Ark</li><li>Tash-Hauli</li><li>Juma Mosque</li><li>Pahlavan Mahmud Mausoleum</li><li>Kalta-Minor Minaret</li><li>Ak-Sheikh-Bobo bastion — a panorama over the whole city</li></ul><p>Fascinating stories of khans, Silk Road caravans and the secrets of ancient Khiva await you — a city that has kept the atmosphere of the real East.</p>`,
         incl: ['Guide for the whole route', 'Walk through Ichan-Kala', 'Palaces, madrasahs, minarets and mosques', 'Stories of khans and the Silk Road'] } },
 
-    { id: 'shahrisabz', cat: 'day', badgeClass: '', img: IMG + 'shakhrisabz/af9fcf20-83ae-4e34-bf3c-733222e80127.jpg',
-      gallery: [IMG + 'shakhrisabz/0988819c-f29b-4acb-81ce-18f1ad7fe754.webp', IMG + 'shakhrisabz/4486f126-c410-447b-9bbb-d67139b7db12.webp', IMG + 'shakhrisabz/bdfd8647-942d-4dc7-a102-096779eb7578.jpg', IMG + 'shakhrisabz/e58b88ce-2b7c-48d6-abec-deb9ce464a02.webp'],
+    { id: 'shahrisabz', cat: 'day', badgeClass: '', img: IMG + 'shakhrisabz/af9fcf20-83ae-4e34-bf3c-733222e80127.webp',
+      gallery: [IMG + 'shakhrisabz/0988819c-f29b-4acb-81ce-18f1ad7fe754.webp', IMG + 'shakhrisabz/4486f126-c410-447b-9bbb-d67139b7db12.webp', IMG + 'shakhrisabz/bdfd8647-942d-4dc7-a102-096779eb7578.webp', IMG + 'shakhrisabz/e58b88ce-2b7c-48d6-abec-deb9ce464a02.webp'],
       ru: { title: 'Из Самарканда в Шахрисабз', meta: 'Целый день · из Самарканда · авто', price: 'от $186', unit: 'за группу', badge: 'Индивидуально',
         long: `<p>Поездка в Шахрисабз займёт около 2 часов. По дороге вы понаблюдаете за неторопливым бытом сельских жителей, использующих вместо транспорта осликов. А ещё заедем на горный базар, где продаётся местная продукция — травы, специи, горный чай, мёд и многое другое.</p><h4>Точки маршрута</h4><ul><li>Пещера-грот Тешик-Таш, где снимали фильм «Апачи»</li><li>Кафе «Катта-Таш» на перевале — попробуете исконно горское блюдо тандыр-гушт и познакомитесь с технологией приготовления одного из гастрономических символов Узбекистана (блюдо очень калорийное — возможно, хватит лёгкого завтрака перед экскурсией)</li><li>Исторический центр Шахрисабза с уникальной сохранившейся архитектурой</li><li>Мемориальный комплекс «Дорус Саодат» с мавзолеем Джахонгира и Омар-Шейха (конец XIV в.) и мечетью Хазрати Имам (XIV в.)</li><li>Комплекс «Дорут-Тиловат» (XIV–XV вв.) с усыпальницей Тимуридов и мечетью Кок-Гумбаз</li><li>Дворец Ак-Сарай — руины резиденции Амира Тимура (Тамерлана)</li></ul>`,
         incl: ['Автомобиль с кондиционером и водитель', 'Сопровождение гида весь день', 'Остановка на горном базаре', 'Фотопаузы на перевале и у Ак-Сарая'] },
@@ -195,7 +197,7 @@
         incl: ['Air-conditioned car and driver', 'Guide throughout the day', 'Stop at the mountain bazaar', 'Photo stops on the pass and at Ak-Saray'] } },
 
     { id: 'chimgan', cat: 'day', badgeClass: '', img: IMG + 'tas/04797f43-c677-4cf8-9d0a-17a7f2877c2a.webp',
-      gallery: [IMG + 'tas/4c8eb723-1fd8-4576-b534-5611e522d255.webp', IMG + 'tas/826b9d53-188e-43cf-8474-d1386435c655.webp', IMG + 'tas/894a2e62-9a3c-42a6-914f-6f7d00d34eb9.jpg', IMG + 'tas/fd868b98-7670-418d-8365-4723a48aff2d.webp'],
+      gallery: [IMG + 'tas/4c8eb723-1fd8-4576-b534-5611e522d255.webp', IMG + 'tas/826b9d53-188e-43cf-8474-d1386435c655.webp', IMG + 'tas/894a2e62-9a3c-42a6-914f-6f7d00d34eb9.webp', IMG + 'tas/fd868b98-7670-418d-8365-4723a48aff2d.webp'],
       ru: { title: 'Из Ташкента — туда, куда вы не ездили (а зря!)', meta: '7 часов · из Ташкента · Тянь-Шань', price: 'от $150', unit: 'за группу', badge: 'из Ташкента',
         long: `<p>Целый день среди гор западного Тянь-Шаня недалеко от Ташкента — места, мимо которых обычно проезжают. А зря!</p><h4>Точки маршрута</h4><ul><li><b>Амирсой.</b> По канатной дороге поднимемся на высоту 2290 метров — панорамы горных вершин и чистый горный воздух.</li><li><b>Чимган.</b> Погуляем по склонам и полюбуемся величественными пиками западного Тянь-Шаня.</li><li><b>Чарвакское водохранилище.</b> Остановимся на высоком холме и насладимся видами знаменитого бирюзового озера в окружении гор. При желании можно искупаться и отдохнуть на чистом пляже.</li><li><b>Смотровая площадка</b> с видами на живописные посёлки Бричмула и Ходжикент.</li><li><b>Многовековые платаны и древние петроглифы</b> возрастом 40–100 тысяч лет до н. э. — прикоснётесь к истории и узнаете о тайнах древних изображений.</li></ul>`,
         incl: ['Трансфер из Ташкента и обратно', 'Сопровождение гида весь день', 'Подъём по канатной дороге Амирсой', 'Остановки на лучших смотровых'] },
@@ -204,7 +206,7 @@
         incl: ['Transfer from Tashkent and back', 'Guide throughout the day', 'Amirsoy cable car ride', 'Stops at the best viewpoints'] } },
 
     { id: 'transfer', cat: 'day', badgeClass: '', img: IMG + 'transfer/3bf1506f-9d0a-4a8f-84d0-5b83602ef17b.webp',
-      gallery: [IMG + 'transfer/car3.jpg', IMG + 'transfer/car2.jpg', IMG + 'transfer/car4.jpg'],
+      gallery: [IMG + 'transfer/car3.webp', IMG + 'transfer/car2.webp', IMG + 'transfer/car4.webp'],
       ru: { title: 'Трансфер из Самарканда в Шахрисабз — и обратно', meta: 'Туда и обратно · авто · без гида', price: 'от $105', unit: 'за группу', badge: 'Трансфер',
         long: `<p><b>Обратите внимание:</b> это не экскурсия, а услуга перевозки — участие гида не предполагается.</p><p>Автомобиль подадим к вашему отелю или другому удобному месту. В Шахрисабзе у вас будет достаточно времени, чтобы самостоятельно погулять по историческому центру: увидеть архитектуру эпохи Темуридов, пройтись по паркам и почувствовать атмосферу древнего города. После прогулки водитель встретит вас в назначенное время и отвезёт обратно в Самарканд.</p><p>Трансфер проходит на комфортабельном автомобиле Chevrolet или Hyundai (детских кресел нет). Дорога в одну сторону занимает около 2 часов; в пути возможны остановки для отдыха, фото и обеда — по вашему желанию.</p>`,
         incl: ['Подача авто к вашему отелю', 'Дорога туда и обратно', 'Комфортный автомобиль (Chevrolet/Hyundai)', 'Свободное время в Шахрисабзе'] },
@@ -213,7 +215,7 @@
         incl: ['Pick-up at your hotel', 'Round-trip drive', 'Comfortable car (Chevrolet/Hyundai)', 'Free time in Shahrisabz'] } },
 
     { id: 'custom-day', cat: 'day', build: true, badgeClass: '', img: '',
-      gallery: [IMG + 'sam/sam2.jpg', IMG + 'hiva/hiva3.jpg', IMG + 'bukh/IMG_3091.jpg'],
+      gallery: [IMG + 'sam/sam2.webp', IMG + 'hiva/hiva3.webp', IMG + 'bukh/IMG_3091.webp'],
       ru: { title: 'Экскурсия под ваш запрос', meta: 'Любой город · ваши интересы', price: 'По запросу', unit: 'под ваши даты', badge: 'Конструктор',
         long: `<p>Не нашли подходящий вариант среди готовых? Расскажите, что хочется увидеть — история, архитектура, фотопрогулки, гастрономия или базары — и я соберу экскурсию на день под ваши интересы, темп и город.</p><p>Пеший формат или на автомобиле с кондиционером. Индивидуально или малой группой.</p>`,
         incl: ['Программа под ваши интересы', 'Любой город Узбекистана', 'Пешком или на авто с кондиционером', 'Индивидуально или малой группой'] },
@@ -249,7 +251,7 @@
         incl: ['A route through 4 cities: Khiva, Bukhara, Samarkand, Tashkent', 'All transfers and guiding', 'Hotels and logistics', 'A personal tour curator-guide'] } },
 
     { id: 'custom', cat: 'multi', build: true, badgeClass: '', img: '',
-      gallery: [IMG + '6e647161-930d-4471-809b-dab252bc5b6f.webp', IMG + 'photo_12_2026-06-04_14-40-04.jpg'],
+      gallery: [IMG + '6e647161-930d-4471-809b-dab252bc5b6f.webp', IMG + 'photo_12_2026-06-04_14-40-04.webp'],
       ru: { title: 'Индивидуальный подбор маршрута', meta: 'Любые города · любые даты', price: 'По запросу', unit: 'под ваши даты', badge: 'Конструктор',
         long: `<p>Расскажите, что вам интересно — история, фотопрогулки, гастрономия, горы или базары — и мы соберём индивидуальный маршрут под ваши даты, темп и бюджет.</p><p>Пеший формат или на автомобиле с кондиционером (все машины в отличном состоянии). Индивидуально или малой группой.</p>`,
         incl: ['Маршрут под ваши интересы', 'Пешком или на авто с кондиционером', 'Индивидуально или малой группой', 'Любой город и любые даты'] },
@@ -289,28 +291,28 @@
   // ===== ГАЛЕРЕЯ =====
   window.GALLERY = [
     // холодные сине-серые тона, от тёмного к светлому
-    { src: IMG + '812c7a3a-f899-4cd7-a518-c0153e70d5a8.jpg', w: 'w-s' },
-    { src: IMG + 'photo_8_2026-06-04_14-40-04.jpg', w: 'w-m' },
+    { src: IMG + '812c7a3a-f899-4cd7-a518-c0153e70d5a8.webp', w: 'w-s' },
+    { src: IMG + 'photo_8_2026-06-04_14-40-04.webp', w: 'w-m' },
     { src: IMG + 'tourists/171d7df1-4691-4449-8a29-e3dc12118d50.webp', w: 'w-s' },
     { src: IMG + 'photo_9_2026-06-04_14-40-04.webp', w: 'w-l' },
     { src: IMG + 'tourists/118ca274-1a40-4d3d-90ab-ca7061be86b7.webp', w: 'w-s' },
     { src: IMG + 'tourists/a217af77-9d95-41c8-95ca-d5b9a662e8d8.webp', w: 'w-m' },
     { src: IMG + 'tourists/b867bfbd-1d38-418c-a596-02bdd7f61def.webp', w: 'w-s' },
     { src: IMG + 'tourists/7ef8b867-4489-4eb9-aa38-cc95c04ce356.webp', w: 'w-s' },
-    { src: IMG + 'photo_6_2026-06-04_14-40-04.jpg', w: 'w-s' },
+    { src: IMG + 'photo_6_2026-06-04_14-40-04.webp', w: 'w-s' },
     { src: IMG + '2bbb9b51-5511-4736-a1c1-bad85687e351.webp', w: 'w-m' },
-    { src: IMG + '6ca42075-daf9-4d90-a8a1-53303daac723.jpg', w: 'w-l' },
-    { src: IMG + 'tourists/photo_2026-06-05_23-20-02.jpg', w: 'w-s' },
+    { src: IMG + '6ca42075-daf9-4d90-a8a1-53303daac723.webp', w: 'w-l' },
+    { src: IMG + 'tourists/photo_2026-06-05_23-20-02.webp', w: 'w-s' },
     { src: IMG + 'd5bfb65b-37ce-43f8-8927-984cca16e890.webp', w: 'w-s' },
     // тёплые золотисто-земляные тона, от светлого к тёмному
     { src: IMG + 'tourists/0daa5087-2649-4ecf-9b59-3444a34cb753.webp', w: 'w-s' },
     { src: IMG + 'tourists/2407b8b1-a65f-4aa0-9b9a-df7081ab4ec5.webp', w: 'w-s' },
     { src: IMG + 'tourists/7066de9d-3f0c-4a3d-a945-f6d0b4bbd816.webp', w: 'w-s' },
     { src: IMG + 'af7a8c1c-c9e3-43c4-84f5-d55a41c08d79.webp', w: 'w-m' },
-    { src: IMG + 'photo_5_2026-06-04_14-40-04.jpg', w: 'w-s' },
+    { src: IMG + 'photo_5_2026-06-04_14-40-04.webp', w: 'w-s' },
     { src: IMG + '70b8d3d7-aecf-441f-baf5-76946eeded5b.webp', w: 'w-m' },
     // глубокий бордовый — финальный тёплый акцент
-    { src: IMG + 'photo_3_2026-06-04_14-40-04.jpg', w: 'w-l' }
+    { src: IMG + 'photo_3_2026-06-04_14-40-04.webp', w: 'w-l' }
   ];
 
   // ===== ПРИМЕНЕНИЕ ПЕРЕВОДА К СТАТИКЕ =====
