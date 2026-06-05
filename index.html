@@ -170,6 +170,7 @@
   .scrollcue span{width:1px;height:40px;background:linear-gradient(rgba(255,255,255,.7),transparent);animation:drop 1.8s infinite}
   @keyframes drop{0%{opacity:0;transform:scaleY(.3);transform-origin:top}50%{opacity:1}100%{opacity:0;transform-origin:bottom}}
   @media(max-width:600px){.scrollcue{display:none}.hero{padding-top:104px}}
+  @media(max-height:960px){.scrollcue{display:none}}
   @media(prefers-reduced-motion:reduce){.hero .bg{animation:none}.hero-in>*{animation:none}.scrollcue span{animation:none}}
 
   /* ===== ЛЕНТА ДОВЕРИЯ (плавный переход в песочный) ===== */
@@ -492,7 +493,7 @@
       <div class="hero-stats">
         <div><b class="count" data-to="4.99" data-dec="2">4,99</b><small>★ рейтинг</small></div>
         <div><b class="count" data-to="3000" data-suf="+">3000+</b><small>довольных гостей</small></div>
-        <div><b class="count" data-to="8" data-suf="">10</b><small>авторских маршрутов</small></div>
+        <div><b class="count" data-to="10" data-suf="">10</b><small>авторских маршрутов</small></div>
       </div>
       <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>Многие гости возвращаются к нам снова — и привозят друзей</div>
     </div>
