@@ -2,6 +2,20 @@
   const TOURS = window.TOURS, REVIEWS = window.REVIEWS, GALLERY = window.GALLERY, T = window.T;
   const TMAP = {}; TOURS.forEach(t => TMAP[t.id] = t);
 
+  // экранирование значения для подстановки в HTML-атрибут (alt и т.п.)
+  const attr = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
+  // ===== КОНТАКТНЫЙ ТЕЛЕФОН — единый источник правды =====
+  // Чтобы сменить номер, поменяйте значения здесь (плюс telephone в JSON-LD в index.html).
+  const PHONE = { wa: '998997709949', tel: '+998997709949', display: '+998 99 770 99 49' };
+  window.PHONE = PHONE;
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(a => { a.href = 'https://wa.me/' + PHONE.wa; });
+  document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+    a.href = 'tel:' + PHONE.tel;
+    if (a.children.length === 0) a.textContent = PHONE.display; // ссылка-номер (в подвале)
+  });
+  { const lf = document.getElementById('leadForm'); if (lf) lf.dataset.wa = PHONE.wa; }
+
   // ===== РЕНДЕР КАРТОЧЕК ТУРОВ =====
   const railDay = document.getElementById('rail-day'), railMulti = document.getElementById('rail-multi');
   const moreSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
@@ -17,7 +31,7 @@
     }
     const tag = d.badge ? `<div class="tags"><span class="tag ${t.badgeClass}">${d.badge}</span></div>` : '';
     return `<button class="tcard" data-id="${t.id}">
-      <div class="im" style="background-image:url('${t.img}')"></div>
+      <img class="im" src="${t.img}" alt="${attr(d.title)}" loading="lazy" decoding="async" draggable="false">
       <div class="grad"></div>${tag}
       <div class="info"><div class="meta">${d.meta}</div><h3>${d.title}</h3>${foot}</div>
     </button>`;
