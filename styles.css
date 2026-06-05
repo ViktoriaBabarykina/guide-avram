@@ -70,7 +70,9 @@
   .brand .mk svg{width:23px;height:23px;color:var(--gold);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
   .brand:hover .mk svg{transform:rotate(90deg)}
   .brand b{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;display:block;line-height:1.05}
-  .brand .sub{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brick);font-weight:700}
+  .brand .sub{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brick);font-weight:700;white-space:nowrap}
+  @media(max-width:600px){header .brand .sub{font-size:8.5px;letter-spacing:.06em}}
+  @media(max-width:360px){header .brand .sub{font-size:7.5px;letter-spacing:.03em}}
   header:not(.scrolled) .brand b{color:#fff}
   header:not(.scrolled) .brand .sub{color:#f0d9a8}
   .menu{display:flex;align-items:center;gap:28px}
