@@ -195,6 +195,8 @@
   .tcard .meta{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#f0cf8d;margin-bottom:9px}
   .tcard h3{font-size:clamp(20px,2.3vw,25px);font-weight:700;line-height:1.16;color:#fff;margin-bottom:15px;text-shadow:0 2px 18px rgba(0,0,0,.55)}
   .tcard .foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:15px;border-top:1px solid rgba(255,255,255,.22)}
+  .m-note{font-size:14px;color:#7d93a1;margin:4px 0 0;display:flex;align-items:center;gap:8px}
+  .m-note svg{flex:none;opacity:.7}
   .price b{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;white-space:nowrap}
   .price small{display:block;font-size:11.5px;color:rgba(255,255,255,.72);font-weight:600}
   .more{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:#f3d493;white-space:nowrap}

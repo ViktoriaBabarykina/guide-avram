@@ -82,7 +82,7 @@
   const modal = document.getElementById('modal'), body = document.body;
   const mImg = document.getElementById('mImg'), mBadge = document.getElementById('mBadge'), mMeta = document.getElementById('mMeta'),
         mTitle = document.getElementById('mTitle'), mPrice = document.getElementById('mPrice'), mThumbs = document.getElementById('mThumbs'),
-        mDesc = document.getElementById('mDesc'), mIncl = document.getElementById('mIncl');
+        mDesc = document.getElementById('mDesc'), mIncl = document.getElementById('mIncl'), mNote = document.getElementById('mNote');
   function openTour(id) {
     const t = TMAP[id]; if (!t) return;
     const d = t[window.LANG] || t.ru;
@@ -93,6 +93,8 @@
     mPrice.innerHTML = d.unit ? `${d.price} <span>· ${d.unit}</span>` : d.price;
     mDesc.innerHTML = d.long;
     mIncl.innerHTML = d.incl.map(x => `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 6"/></svg>${x}</li>`).join('');
+    if (t.noNote) { mNote.style.display = 'none'; }
+    else { mNote.style.display = ''; mNote.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>${T('cardNote')}`; }
     const imgs = [cover, ...t.gallery].filter((s, i, a) => a.indexOf(s) === i);
     mThumbs.innerHTML = imgs.map((s, i) => `<button class="t ${i === 0 ? 'active' : ''}" data-src="${s}" style="background-image:url('${s}')"></button>`).join('');
     const fs = document.getElementById('formTour'); if (fs) { [...fs.options].forEach(o => { if (o.text.includes(d.title.split(':')[0].split(' —')[0])) fs.value = o.value; }); }
